@@ -1,0 +1,23 @@
+body { 
+	font: normal small Arial, Helvetica, sans-serif; 
+	margin-top: 2em;
+}
+
+li { 
+	margin-bottom: 1em;
+}
+
+a { 
+	color: #C00;
+}
+
+a:hover,
+a:focus { 
+	color: #666; 
+	text-decoration: none;
+}
+
+#container { 
+	margin: auto; 
+	width: 760px;
+}

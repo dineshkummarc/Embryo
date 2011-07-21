@@ -1,0 +1,20 @@
+#home {
+	border:1px solid #C9CACB;
+}
+
+#menu li.last {
+	padding-bottom:7px;
+}
+
+#home > span {
+	border-color:#FFF;
+	padding-bottom:13px;
+}
+
+#home span.ie a {
+	padding-top:3px;
+}
+
+#home span.icon {
+	top:4px;
+}

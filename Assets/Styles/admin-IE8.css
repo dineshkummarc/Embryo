@@ -1,0 +1,14 @@
+#home {
+	border:1px solid #C9CACB;
+}
+
+#home > span {
+	border-color:#FFF;
+}
+
+/* 
+	IE8 seems to have a bug where it shifts the <caption> element by 1px?
+*/
+.data caption {
+	margin-left:-1px;
+}

@@ -1,0 +1,406 @@
+/*
+	Author		: Storm Creative
+	Document		: Admin
+	Created on	: 29-07-2010
+	Description	: Determines the design and layout of the Admin area for the Intranet system.
+	Swatches		:
+		#007AC2 = Blue
+		#009CD9 = Cyan
+*/
+
+html, body {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:small;
+	height:100%;
+	margin:0;
+	padding:0;
+}
+
+img {
+	border:0;
+}
+
+textarea {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:100%;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+	line-height:1.5em;
+	margin:0 0 1em;
+}
+
+#container {
+	min-height:100%;
+	position:relative;
+}
+
+#header {
+	background-color:#F2F3F3;
+	height:auto !important;
+	height:150px;
+	min-height:150px;
+	padding:0;
+	position:relative;
+}
+
+#header.login {
+	height:auto !important;
+	height:105px;
+	min-height:105px;
+}
+
+#body {
+	background:url(../Images/Admin/body.png) left top repeat-x #FFF;
+	padding:10px 0 85px; /* Bottom Padding = Height of the footer */
+}
+
+.content {
+	margin:auto;
+	overflow:hidden;
+	position:relative;
+	width:960px;
+}
+
+#footer {
+	background-color:#3A3A3C;
+	bottom:0;
+	height:85px; /* Height of the footer */
+	position:absolute;
+	width:100%;
+}
+
+#footer a {
+	background:url(../Images/Admin/storm.png) 0 0 no-repeat;
+	display:block;
+	height:29px;
+	margin:28px 0 0;
+	text-indent:-999em;
+	width:119px;
+}
+
+#logo {
+	background:url(../Images/Admin/logo.png) 0 0 no-repeat;
+	display:block;
+	height:60px;
+	margin-top:23px;
+	text-indent:-999em;
+	width:942px;
+}
+
+#menu a.icon:hover,
+#menu a.icon:focus {
+	color:#007AC2;
+}
+
+#home a:hover,
+#home a:focus {
+	color:#009CD9;
+}
+
+#menu-container {
+	width:215px;
+}
+
+#menu-container,
+#main {
+	float:left;
+}
+
+#main {
+	background:url(../Images/Admin/bg-main.png) left bottom repeat-x #FFF;
+	border:1px solid #E8E9EA;
+	margin-left:15px;
+	padding:20px;
+	width:688px;
+}
+
+#menu,
+#home {
+	background:url(../Images/Admin/menu.png) left bottom repeat-x #FFF;
+	list-style:none;
+	margin:0 0 2em;
+	padding:0;
+	
+  	-moz-box-shadow:2px 3px 5px rgba(0, 0, 0, 0.2);
+	-webkit-box-shadow:2px 3px 5px rgba(0, 0, 0, 0.2);
+  	box-shadow:2px 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+#home {
+	background:url(../Images/Admin/menu-home.png) 0 0 repeat-x #004F94;
+	margin-bottom:0.8em;
+	color:#FFF;
+	
+	/* Following rounded corner radius settings not understood by IE at all */
+	-moz-border-radius:10px 10px 0 0;
+	-webkit-border-radius:10px 10px 0 0;
+	border-radius:10px 10px 0 0;
+}
+
+#home a {
+	color:#FFF;
+}
+
+#menu ul {
+	list-style:none;
+	margin:5px 0 0 38px;
+	padding:0;
+}
+
+#menu ul a {
+	color:#007AC2;
+	text-decoration:none;
+}
+
+#menu ul a:hover,
+#menu ul a:focus {
+	color:#ABE0F9;
+}
+
+#menu > li {
+	border:1px solid #C9CACB;
+	border-top:0;
+}
+
+#menu > li:first-child {
+	border-top:1px solid #C9CACB;
+}
+
+#menu li > span,
+#home > span {
+	border:1px solid #FFF;
+	display:block;
+	padding:8px;
+}
+
+#home > span {
+	border-color:#009CD9;
+	padding-bottom:12px;
+	
+	/* Following rounded corner radius settings not understood by IE at all */
+	-moz-border-radius:10px 10px 0 0;
+	-webkit-border-radius:10px 10px 0 0;
+	border-radius:10px 10px 0 0;
+}
+
+#menu strong,
+a.icon {
+	background-position:0 0;
+	background-repeat:no-repeat;
+	color:#000;
+	display:inline-block;
+	font-weight:normal;
+	margin-top:-7px;
+	text-decoration:none;
+}
+
+#menu strong[class^=icon] a {
+	color:#000;
+	text-decoration:none;
+}
+
+#menu strong[class^=icon] a:hover,
+#menu strong[class^=icon] a:focus {
+	color:#007AC2;
+}
+
+span.icon {
+	background:url(../Images/Admin/menu-icons.png) 0 0 no-repeat;
+	display:inline-block;
+	height:27px;
+	margin:0 7px 0 0;
+	position:relative;
+	top:7px;
+	width:29px;
+}
+
+.icon.welcome {
+	background-position:0 0;
+}
+
+.icon.news {
+	background-position:-29px 0;
+}
+
+.icon.events {
+	background-position:-58px 0;
+}
+
+.icon.forms {
+	background-position:-87px 0;
+}
+
+.icon.governance {
+	background-position:-116px 0;
+}
+
+.icon.contacts {
+	background-position:-145px 0;
+}
+
+.icon.meetings {
+	background-position:-174px 0;
+}
+
+.icon.policies {
+	background-position:-203px 0;
+}
+
+.icon.locations {
+	background-position:-232px 0;
+}
+
+.icon.resources {
+	background-position:-261px 0;
+}
+
+.icon.directories {
+	background-position:-290px 0;
+}
+
+.icon.posts {
+	background-position:-319px 0;
+}
+
+.icon.groups {
+	background-position:-348px 0;
+}
+
+.icon.blog {
+	background-position:-377px 0;
+}
+
+.icon.logout {
+	background-position:-406px 0;
+}
+
+#menu li.last {
+	padding-bottom:5px;
+}
+
+p.title {
+	background-color:#3A3A3C;
+	color:#FFF;
+	padding:10px 13px;
+}
+
+#login,
+#register {
+	border:1px solid #ABACAF;
+	margin:120px auto 0;
+	width:585px;
+}
+
+#login a,
+#register a {
+	color:#007AC2;
+}
+
+#login a:hover,
+#login a:focus,
+#register a:hover,
+#register a:focus {
+	color:#333;
+	text-decoration:none;
+}
+
+#login input[type=text],
+#login input[type=password],
+#register input[type=text],
+#register input[type=password] {
+	border:1px solid #58585A;
+	-moz-border-radius:5px; 
+	-webkit-border-radius:5px; 
+	border-radius:5px;
+	padding:5px;
+	width:273px;
+}
+
+#login input[type=text]:focus,
+#login input[type=password]:focus,
+#register input[type=text]:focus,
+#register input[type=password]:focus {
+	border:1px solid #007AC2;
+	color:#007AC2;
+	outline:0;
+}
+
+#login > div,
+#register > div {
+	background:url(../Images/Admin/login-bg.png) left top repeat-x #F3F3F4;
+	border:1px solid #FFF;
+	padding-bottom:3em;
+}
+
+#login-button {
+	-moz-border-radius:14px; 
+	-webkit-border-radius:14px; 
+	background-color:#007AC2; 
+	behavior:url(/intranet.nhs.uk/Assets/Styles/PIE.php);
+	border:0; 
+	border-radius:14px; 
+	color:#FFF;
+	cursor:pointer; 
+	float:right; 
+	font-size:100%;
+	margin:10px 120px 0 0;
+	padding:4px 0 5px; 
+	position:relative;
+	width:65px;
+}
+
+#main h1,
+#main h2 {
+	color:#007AC2;
+	font-size:120%;
+}
+
+#bar-container {
+	overflow:hidden;
+	position:relative;
+	top:7px;
+}
+
+#bar {
+	background:url(../Images/Admin/bg-bar.png) left top repeat-x #454446;
+	height:48px;
+	list-style:none;
+	margin:0;
+	padding:0;
+	text-align:center;
+	width:100%;
+}
+
+#bar li {
+	display:inline;
+}
+
+#bar img {
+	padding-top:8px;
+}
+
+#account {
+	color:#FFF;
+	font-size:140%;
+	left:45px;
+	position:relative;
+	top:-9px;
+}
+
+#account span {
+	border-right:1px solid #FFF;
+	padding-right:8px;
+}
+
+#account a {
+	color:#FFF;
+	font-size:75%;
+	padding-left:5px;
+	text-decoration:none;
+}
+
+#account a:hover,
+#account a:focus {
+	color:#333;
+}

@@ -1,0 +1,65 @@
+/*
+	Author		: Storm Creative
+	Document		: Layout
+	Created on	: dd-mm-yyyy
+	Description	: Determines the design and layout of the website.
+	Swatches		:
+		#000000 = Black
+*/
+
+/* HTML5 Block Stylings
+ **********************************************************************/
+
+article, aside, dialog, figure, footer, header, hgroup, menu, nav, section {
+	display:block;
+}
+
+/* Set Generic Browser Defaults
+ **********************************************************************/
+
+html, body
+{ border:0; color:#000; font:normal small Arial, Verdana, sans-serif; margin:0; padding:0; vertical-align:baseline; }
+
+body
+{ background-color:#FFF; }
+
+pre, code
+{ font-family:Consolas, "Courier New", Courier, monospace; color:#00C; }
+
+table
+{ border-collapse:collapse; table-layout:fixed; }
+
+p, h1, h2, h3, h4, h5, h6
+{ margin:0 0 0.5em; }
+
+h1
+{ font-size:3em; }
+
+h2
+{ font-size:2.5em; }
+
+h3, h4, h5, h6
+{ font-size:2em; }
+
+img, embed, object
+{ border:none; display:block; }
+
+form
+{ margin:0; }
+
+hr
+{ background-color:#959AC3; border:0; color:#959AC3; height:1px; }
+
+/* Styles for Image Replacement Technique
+ **********************************************************************/
+
+.imageReplacement
+{ margin:0; position:relative; }
+
+.imageReplacement span
+{ background-repeat:no-repeat; height:100%; position:absolute; width:100%; }
+
+/* General Layout
+ **********************************************************************/
+
+
