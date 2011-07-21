@@ -31,8 +31,7 @@ There are a few different JavaScript libraries we use:
 "jQuery UI provides abstractions for low-level interaction and animation, advanced effects and high-level, themeable widgets, built on top of the jQuery JavaScript Library"
 
 * [jCarouselLite](http://www.gmarwaha.com/jquery/jcarousellite/) - 
-"jCarousel Lite is a jQuery plugin that carries you on a carousel ride filled with images and HTML content"
-I've modified this script so it can move forwards as well as backwards + made it validate.
+"jCarousel Lite is a jQuery plugin that carries you on a carousel ride filled with images and HTML content". Note that I've modified this script so it can move forwards as well as backwards + made it validate.
 
 * [Uploadify](http://www.uploadify.com/) - 
 "Uploadify is a jQuery plugin that integrates a fully-customizable multiple file upload utility on your website"
