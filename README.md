@@ -6,7 +6,9 @@ Description
 
 These are a standard set of files, scripts, stylesheets, folder structures that I use whenever I start a new web project.
 
-Well... I don't use jQuery or any of it's plugins (my team are more reliant on jQuery for helping them with JavaScript, but I prefer to go 'plain vanilla' style).
+There are a couple of scripts I rarely use nowadays, these being: jQuery (+ two plugins), SWFObject - but I've included them for those odd occasions.
+
+You'll notice the MVC scripts have no corresponding HTML(View) - that's because I took the example from another repo. The principles for my MVC work is nearly always the same and the code only changes slightly to reflect the different Models/Views involved so I'm happy to just edit the existing MVC code to suit my needs (if you need to better understand the code then view the 'MVC Start-up Kit' repo linked below)
 
 Google Pagespeed Module
 -----------------------
@@ -21,20 +23,23 @@ There are a few different JavaScript libraries we use:
 * [HTML5Shim](http://www.iecss.com/print-protector/) - 
 "IE Print Protector helps IE render HTML5 elements correctly, both on screen and in print."
 
-* [LABjs](http://labjs.com/) - 
-"The core purpose of LABjs (Loading And Blocking JavaScript) is to be an all-purpose, on-demand JavaScript loader, capable of loading any JavaScript resource, from any location, into any page, at any time"
+* [RequireJs](http://www.requirejs.org/) - 
+"RequireJS loads plain JavaScript files as well as more defined modules"
 
-* [jQuery](http://jquery.com/) - 
-"jQuery is a fast and concise JavaScript Library that simplifies HTML document traversing, event handling, animating, and Ajax interactions for rapid web development"
+* [When](https://github.com/briancavalier/when.js#readme) - 
+"A lightweight CommonJS Promises/A and when() implementation. It also provides several other useful Promise-related concepts, such as joining and chaining, and has a robust unit test suite."
 
-* [jQuery UI](http://jqueryui.com/) - 
-"jQuery UI provides abstractions for low-level interaction and animation, advanced effects and high-level, themeable widgets, built on top of the jQuery JavaScript Library"
+* [Morpheus](https://github.com/ded/morpheus#readme) - 
+"A Brilliant Animator. Morpheus lets you "tween anything" in parallel on multiple elements"
 
-* [jCarouselLite](http://www.gmarwaha.com/jquery/jcarousellite/) - 
-"jCarousel Lite is a jQuery plugin that carries you on a carousel ride filled with images and HTML content". Note that I've modified this script so it can move forwards as well as backwards + made it validate.
+* [PubSubz](https://github.com/addyosmani/pubsubz#readme) - 
+"Just another compact library-agnostic Pub/Sub implementation."
 
-* [Uploadify](http://www.uploadify.com/) - 
-"Uploadify is a jQuery plugin that integrates a fully-customizable multiple file upload utility on your website"
+* [MVC Starter](https://github.com/Integralist/MVC-Start-up-Kit/tree/library_agnostic#readme) - 
+"Basic JavaScript implementation of the classic MVC design pattern"
+
+* [Jasmine BDD](http://pivotal.github.com/jasmine/) - 
+"Jasmine is a behavior-driven development framework for testing your JavaScript code. It does not depend on any other JavaScript frameworks. It does not require a DOM. And it has a clean, obvious syntax so that you can easily write tests."
 
 * [Google Analytics](http://www.google.com/analytics/) - 
 "Google Analytics is the enterprise-class web analytics solution that gives you rich insights into your website traffic and marketing effectiveness"

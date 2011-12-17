@@ -1,3 +1,10 @@
+/*
+	Author		: Mark McDonnell
+	Document		: IE6_page
+	Created on	: 20-08-2011
+	Description	: Determines the design and layout of the IE6 notification page.
+*/
+
 body { 
 	font: normal small Arial, Helvetica, sans-serif; 
 	margin-top: 2em;
