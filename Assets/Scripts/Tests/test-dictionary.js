@@ -1,4 +1,4 @@
-define(['Utils/getType', 'Utils/dictionary'], function(getType, Dictionary){
+define(['Utils/DOM/getType', 'Utils/dictionary'], function(getType, Dictionary){
 
 	// Test Suite
 	describe('Dictionary tests', function() {

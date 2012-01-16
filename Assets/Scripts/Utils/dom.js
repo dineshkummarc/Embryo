@@ -1,10 +1,10 @@
 define(function(require){
 
 	return {
-		elementSiblings: require('Utils/elementSiblings'),
-		insertAdjacentHTML: require('Utils/insertAdjacentHTML'),
-		insertAfter: require('Utils/insertAfter'),
-		outerHTML: require('Utils/outerHTML')
+		elementSiblings: require('Utils/DOM/elementSiblings'),
+		insertAdjacentHTML: require('Utils/DOM/insertAdjacentHTML'),
+		insertAfter: require('Utils/DOM/insertAfter'),
+		outerHTML: require('Utils/DOM/outerHTML')
 	};
 
 });

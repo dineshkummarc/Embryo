@@ -1,4 +1,4 @@
-define(['Utils/getArrayOfClassNames', 'Utils/addClass', 'Utils/hasClass', 'Utils/removeClass'], function(classes, add, has, remove){
+define(['Utils/CSS/getArrayOfClassNames', 'Utils/CSS/addClass', 'Utils/CSS/hasClass', 'Utils/CSS/removeClass'], function(classes, add, has, remove){
 
 	// Test Suite
 	describe('CSS tests', function() {

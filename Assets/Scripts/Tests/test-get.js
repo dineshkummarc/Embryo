@@ -1,4 +1,4 @@
-define(['Utils/getType', 'Utils/get'], function(getType, get){
+define(['Utils/DOM/getType', 'Utils/get'], function(getType, get){
 
 	// Test Suite
 	describe('Get methods tests', function() {

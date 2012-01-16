@@ -7,7 +7,7 @@
 	<meta name="description" content="" />
 	<meta name="author" content="" />
 	<title></title>
-	<script src="Assets/Scripts/html5.min.js"></script>
+	<script src="Assets/Scripts/Utils/html5.min.js"></script>
 	<link rel="stylesheet" href="Assets/Styles/structure.css" />
 	<link rel="stylesheet" media="screen and (-webkit-min-device-pixel-ratio:0)" href="Assets/Styles/webkit.css" />
 </head>

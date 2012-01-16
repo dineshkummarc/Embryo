@@ -1,9 +1,9 @@
 define(function(require){
 
 	return {
-		method: require('Utils/isHostMethod'),
-		collection: require('Utils/isHostCollection'),
-		object: require('Utils/isHostObject')
+		method: require('Utils/Host/isHostMethod'),
+		collection: require('Utils/Host/isHostCollection'),
+		object: require('Utils/Host/isHostObject')
 	};
 
 });
