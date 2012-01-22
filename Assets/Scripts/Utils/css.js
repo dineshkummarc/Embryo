@@ -1,11 +1,15 @@
-define(['require'], function(require){
+define(['Utils/CSS/getAppliedStyle', 
+		'Utils/CSS/getArrayOfClassNames', 
+		'Utils/CSS/addClass', 
+		'Utils/CSS/removeClass', 
+		'Utils/CSS/hasClass'], function(getAppliedStyle, getArrayOfClassNames, addClass, removeClass, hasClass){
 
 	return {
-		style: require('Utils/CSS/getAppliedStyle'),
-		classes: require('Utils/CSS/getArrayOfClassNames'),
-		add: require('Utils/CSS/addClass'),
-		remove: require('Utils/CSS/removeClass'),
-		has: require('Utils/CSS/hasClass')
+		style: getAppliedStyle,
+		classes: getArrayOfClassNames,
+		add: addClass,
+		remove: removeClass,
+		has: hasClass
 	}
 
 });
