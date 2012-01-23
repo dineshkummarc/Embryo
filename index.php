@@ -15,7 +15,7 @@
 <body>
 	<?php require 'Assets/Includes/IE6.php'; ?>    
 	<div id="container">
-		//
+		
 	</div>
 	<?php flush(); ?>
 	<script data-main="Assets/Scripts/main" src="Assets/Scripts/Require.min.js"></script>
