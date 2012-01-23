@@ -1,5 +1,5 @@
-define(['async!http://twitter.com/statuses/user_timeline/integralist.json', 'Utils/css'], function(tweets, css){
+define(['async!http://twitter.com/statuses/user_timeline/integralist.json'], function(tweets){
 
 	console.log(tweets);
-
+	
 });
