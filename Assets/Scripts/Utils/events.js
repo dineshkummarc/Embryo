@@ -1,4 +1,4 @@
-define(['require', 'Utils/Host/isHostMethod'], function(require, isHostMethod){
+define(['./Host/isHostMethod'], function(isHostMethod){
 
 	var events = {
 		

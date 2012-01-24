@@ -8,12 +8,19 @@
 	<meta name="author" content="" />
 	<title></title>
 	<script src="Assets/Scripts/Utils/html5.min.js"></script>
+	<link rel="stylesheet" href="Assets/Styles/normalise.css" />
+	<link rel="stylesheet" href="Assets/Styles/bootstrap.css" />
 	<link rel="stylesheet" href="Assets/Styles/structure.css" />
+	<!-- 
+	As of 24/01/2012 modpagespeed fails to minify stylesheets that include @media declarations so we keep them separate.
+	We could include them an then manually minify the files, that's not a problem but I chose this way as it was clearer that the following styles were for WebKit.
+	-->
 	<link rel="stylesheet" media="screen and (-webkit-min-device-pixel-ratio:0)" href="Assets/Styles/webkit.css" />
 </head>
 <?php flush(); ?>
 <body>
-	<?php require 'Assets/Includes/IE6.php'; ?>    
+	<a href="https://github.com/Integralist/Project-Template-Files#readme" id="forkme"><img src="Assets/Images/forkme.png"></a>
+	<?php require 'Assets/Includes/IE6.php'; ?>
 	<div id="container">
 		
 	</div>

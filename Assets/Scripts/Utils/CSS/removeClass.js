@@ -1,4 +1,4 @@
-define(['Utils/CSS/getArrayOfClassNames'], function(getArrayOfClassNames){
+define(['./getArrayOfClassNames'], function(getArrayOfClassNames){
 
 	var removeClass;
 	

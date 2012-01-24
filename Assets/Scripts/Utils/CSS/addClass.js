@@ -1,4 +1,4 @@
-define(['Utils/CSS/getArrayOfClassNames', 'Utils/CSS/hasClass'], function(getArrayOfClassNames, hasClass){
+define(['./getArrayOfClassNames', './hasClass'], function(getArrayOfClassNames, hasClass){
 
 	var addClass;
 	

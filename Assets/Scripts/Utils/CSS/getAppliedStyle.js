@@ -1,4 +1,4 @@
-define(['Utils/toCamelCase', 'Utils/toHyphens'], function(toCamelCase, toHyphens){
+define(['../String/toCamelCase', '../String/toHyphens'], function(toCamelCase, toHyphens){
 
 	/**
 	 * The getAppliedStyle method returns the current value of a specific CSS style property on a particular element

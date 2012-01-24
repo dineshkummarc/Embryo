@@ -1,1 +1,5 @@
-@import url('bootstrap.css');
+#forkme {
+	position: absolute;
+	right: 0;
+	top: 0;
+}
