@@ -1,5 +1,19 @@
-#forkme {
-	position: absolute;
+body {
+	margin: 1em;
+}
+
+.container {
+	position: relative;
+}
+
+.abs {
+	position: absolute;	
+}
+
+.right {
 	right: 0;
+}
+
+.top {
 	top: 0;
 }

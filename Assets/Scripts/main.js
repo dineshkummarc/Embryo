@@ -1,7 +1,8 @@
 require.config({ 
 	paths: {
 		async: 'Plugins/async',
-		jquery: 'Utils/Libraries/jquery'
+		jquery: 'Utils/Libraries/jquery',
+		tpl: 'Plugins/tpl'
 	}
 });
 
