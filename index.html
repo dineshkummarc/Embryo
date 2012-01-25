@@ -17,9 +17,7 @@
 	-->
 	<link rel="stylesheet" media="screen and (-webkit-min-device-pixel-ratio:0)" href="Assets/Styles/webkit.css" />
 </head>
-<?php flush(); ?>
 <body>
-	<?php require 'Assets/Includes/IE6.php'; ?>
 	<div class="container">
 		<a href="https://github.com/Integralist/Project-Template-Files#readme" class="abs right top"><img src="Assets/Images/forkme.png"></a>
 		<h1>Project Template</h1>
@@ -75,8 +73,5 @@
 		<h2>RequireJs Build Script</h2>
 		<p>I use a custom build script along with the RequireJs' `r.js` optimiser which minifies and concatenates all my scripts into a single file ready for production use.</p>
 	</div>
-	<?php flush(); ?>
-	<script data-main="Assets/Scripts/main" src="Assets/Scripts/Require.min.js"></script>
-	<?php include 'Assets/Includes/GoogleAnalytics.php'; ?>
-</body>
+	<script data-main="Assets/Scripts/main" src="Assets/Scripts/Require.min.js"></script></body>
 </html>
