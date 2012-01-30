@@ -5,11 +5,12 @@
  */
 define(function(require){
 
+	require('./DOM/insertAdjacentHTML');
+	require('./DOM/outerHTML');
+	
 	return {
 		elementSiblings: require('./DOM/elementSiblings'),
-		insertAdjacentHTML: require('./DOM/insertAdjacentHTML'),
-		insertAfter: require('./DOM/insertAfter'),
-		outerHTML: require('./DOM/outerHTML')
+		insertAfter: require('./DOM/insertAfter')
 	};
 
 });

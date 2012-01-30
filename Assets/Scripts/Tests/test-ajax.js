@@ -23,6 +23,7 @@ define(['Utils/ajax'], function(ajax){
     		this.myAjax.restore();
   		});
   		
+  		// Spec
 		it('Grabs data and returns a json object', function(){
 			
 			var callback = sinon.spy();
