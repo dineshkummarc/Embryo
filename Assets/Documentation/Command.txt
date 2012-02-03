@@ -1,0 +1,1 @@
+mdown -o "../" --include "*.md" --header "../Template/header.html" --footer "../Template/footer.html"
