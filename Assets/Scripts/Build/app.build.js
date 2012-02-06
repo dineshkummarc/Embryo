@@ -23,7 +23,7 @@
      * Otherwise your build script wont be able to find your plugins/named modules and will generate an error when building.
      */
     paths: {
-        async: 'Plugins/async'
+        async: 'Plugins/async',
         jquery: 'Utils/jquery'
     },
     optimize: 'none',
