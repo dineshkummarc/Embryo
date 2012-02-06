@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Documentation</title>
+		<link rel="stylesheet" href="../Styles/normalise.css">
+		<link rel="stylesheet" href="../Styles/bootstrap.css">
+		<link rel="stylesheet" href="../Styles/structure.css">
+		<link rel="stylesheet" href="Template/docs.css">
+	</head>
+	<body>
+		<div class="container docs">
+			<a href="https://github.com/Integralist/Project-Template-Files#readme" class="abs right top"><img src="../Images/forkme.png"></a>
+				<h1>CSS</h1>
+
+<p>Here are the list of CSS methods available:</p>
+
+<ul>
+<li>getArrayOfClassNames</li>
+<li>addClass</li>
+<li>hasClass</li>
+<li>removeClass</li>
+</ul>
+
+<h1>Bootstrap code</h1>
+
+<pre><code>
+define(['Utils/css'], function(css){
+
+    // code here
+
+});
+</code></pre>
+
+<h2>getArrayOfClassNames</h2>
+
+<pre><code>
+var h2 = document.getElementsByTagName('h2')[0];
+classes(h2);
+</code></pre>
+
+<h2>addClass</h2>
+
+<pre><code>
+var h2 = document.getElementsByTagName('h2')[0];
+add(h2, 'newclass');
+</code></pre>
+
+<h2>hasClass</h2>
+
+<pre><code>
+var h2 = document.getElementsByTagName('h2')[0];
+has(h2, 'myclassa');
+</code></pre>
+
+<h2>removeClass</h2>
+
+<pre><code>
+var h2 = document.getElementsByTagName('h2')[0];
+remove(h2, 'myclassb');
+</code></pre>		</div>
+	</body>
+</html>

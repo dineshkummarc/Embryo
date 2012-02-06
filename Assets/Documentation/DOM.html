@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Documentation</title>
+		<link rel="stylesheet" href="../Styles/normalise.css">
+		<link rel="stylesheet" href="../Styles/bootstrap.css">
+		<link rel="stylesheet" href="../Styles/structure.css">
+		<link rel="stylesheet" href="Template/docs.css">
+	</head>
+	<body>
+		<div class="container docs">
+			<a href="https://github.com/Integralist/Project-Template-Files#readme" class="abs right top"><img src="../Images/forkme.png"></a>
+				<h1>DOM</h1>
+
+<p>Here are the list of DOM methods available:</p>
+
+<ul>
+<li>elementSiblings</li>
+<li>insertAdjacentHTML</li>
+<li>insertAfter</li>
+<li>outerHTML</li>
+</ul>
+
+<p>Some of which I split into a separate module called 'get' as it made more sense from an api design perspective:</p>
+
+<ul>
+<li>getDocHeight</li>
+<li>getEl</li>
+<li>getOffset</li>
+<li>getTag</li>
+<li>getType</li>
+</ul>
+
+<h1>Bootstrap code (for DOM module)</h1>
+
+<pre><code>
+define(['Utils/dom'], function(dom){
+
+    // code here
+
+});
+</code></pre>
+
+<h2>elementSiblings</h2>
+
+<pre><code>
+var header = document.getElementsByTagName('h2'),
+    next = dom.elementSiblings.nextElementSibling(header[0]), // &lt;h2 class="myclassa myclassb">
+    prev = dom.elementSiblings.prevElementSibling(header[0]); // &lt;h1 id="mytest">
+
+</code></pre>
+
+<h2>insertAdjacentHTML</h2>
+
+<pre><code>
+var header = document.getElementById('mytest');
+
+header.insertAdjacentHTML('beforebegin', '&lt;p>my beforebegin&lt;/p>');
+header.insertAdjacentHTML('afterbegin', '&lt;p>my afterbegin&lt;/p>');
+header.insertAdjacentHTML('beforeend', '&lt;p>my beforeend&lt;/p>');
+header.insertAdjacentHTML('afterend', '&lt;p>my afterend&lt;/p>');
+</code></pre>
+
+<h2>insertAfter</h2>
+
+<pre><code>
+var header = document.getElementById('mytest'),
+    newnode = document.createElement('h3'),
+    newtext = document.createTextNode('A header3 created for insertAfter test');
+
+newnode.appendChild(newtext);
+dom.insertAfter(newnode, header);
+</code></pre>
+
+<h2>outerHTML</h2>
+
+<pre><code>
+var header = document.getElementById('mytest'); // &lt;h1 id="mytest">Unit &lt;code>Tests&lt;/code>&lt;/h1>
+header.outerHTML = "&lt;h2 id='mytest'>Unit &lt;code>Tests&lt;/code>&lt;/h2>";
+</code></pre>
+
+<h1>Bootstrap code (for Get module)</h1>
+
+<pre><code>
+define(['Utils/get'], function(get){
+
+    // code here
+
+});
+</code></pre>
+
+<h2>getDocHeight</h2>
+
+<pre><code>
+get.docheight();
+</code></pre>
+
+<h2>getEl</h2>
+
+<pre><code>
+get.el('mytest');
+</code></pre>
+
+<h2>getOffset</h2>
+
+<pre><code>
+var h2 = document.getElementsByTagName('h2')[0];
+
+get.offset(h2).left;
+get.offset(h2).top;
+</code></pre>
+
+<h2>getTag</h2>
+
+<pre><code>
+get.tag({ tag:'h2', first:true });
+</code></pre>
+
+<h2>getType</h2>
+
+<pre><code>
+var arr = ['a', 'b', 'c'];
+
+get.type(h2);
+</code></pre>		</div>
+	</body>
+</html>

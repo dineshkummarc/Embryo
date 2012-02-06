@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Documentation</title>
+		<link rel="stylesheet" href="../Styles/normalise.css">
+		<link rel="stylesheet" href="../Styles/bootstrap.css">
+		<link rel="stylesheet" href="../Styles/structure.css">
+		<link rel="stylesheet" href="Template/docs.css">
+	</head>
+	<body>
+		<div class="container docs">
+			<a href="https://github.com/Integralist/Project-Template-Files#readme" class="abs right top"><img src="../Images/forkme.png"></a>
+				<h1>Array</h1>
+
+<p>Here are the list of Array methods available:</p>
+
+<ul>
+<li>filter</li>
+<li>forEach</li>
+<li>indexOf</li>
+<li>lastIndexOf</li>
+<li>map</li>
+<li>reduce</li>
+<li>reduceRight</li>
+<li>unique</li>
+</ul>
+
+<h1>Bootstrap code</h1>
+
+<pre><code>
+define(['Utils/array'], function(array){
+
+    // code here
+
+});
+</code></pre>
+
+<h2>filter</h2>
+
+<pre><code>
+var data = ['a', 'a', 1, 'b', 'b', 2, 'c', 'c', 3, 'd'],
+    newArray;
+
+// creates a new array with all numeric items that passed the test implemented by provided function
+newArray = array.filter(data, function(item){
+    return (typeof item == 'number') ? true : false;
+});
+</code></pre>
+
+<h2>forEach</h2>
+
+<pre><code>
+var data = ['a', 'a', 1, 'b', 'b', 2, 'c', 'c', 3, 'd'];
+
+// executes provided function once per array element
+array.forEach(data, function(item, index){
+    if (typeof item == 'number') {
+        data[index] = ++item;
+    }
+});
+</code></pre>
+
+<h2>indexOf</h2>
+
+<pre><code>
+var data = ['a', 'a', 1, 'b', 'b', 2, 'c', 'c', 3, 'd'],
+    // returns the first index at which the given item can be found in the array (or -1 if not found)
+    search1 = array.indexOf(data, 'c'),
+    search2 = array.indexOf(data, 'xyz');
+</code></pre>
+
+<h2>lastIndexOf</h2>
+
+<pre><code>
+var data = ['a', 'a', 1, 'b', 'b', 2, 'c', 'c', 3, 'd'],
+    // returns the last index at which the given item can be found in the array (or -1 if not found)
+    search1 = array.lastIndexOf(data, 'c'),
+    search2 = array.lastIndexOf(data, 'xyz');
+</code></pre>
+
+<h2>map</h2>
+
+<pre><code>
+var data = ['a', 'a', 1, 'b', 'b', 2, 'c', 'c', 3, 'd'],
+    newArray;
+
+// creates a new array with the results of calling the provided function on every item in this array
+newArray = array.map(data, function(item, index){
+    if (typeof item == 'string') {
+        return item + '!!!';
+    } else if (typeof item == 'number') {
+        return ++item;
+    }               
+});
+</code></pre>
+
+<h2>reduce</h2>
+
+<pre><code>
+var data = ['a', 'a', 1, 'b', 'b', 2, 'c', 'c', 3, 'd'],
+    result;
+
+// creates a single value from applying a function against an accumulator
+// and each value of the array (from left-to-right) as to reduce it to a single value
+result = array.reduce(data, function(previousValue, currentValue, index){
+    return previousValue + currentValue;
+});
+</code></pre>
+
+<h2>reduceRight</h2>
+
+<pre><code>
+var data = ['a', 'a', 1, 'b', 'b', 2, 'c', 'c', 3, 'd'],
+    result;
+
+// creates a single value from applying a function simultaneously against 
+// two values of the array (from right-to-left) as to reduce it to a single value
+result = array.reduceRight(data, function(previousValue, currentValue, index){
+    return previousValue + currentValue;
+});
+</code></pre>
+
+<h2>unique</h2>
+
+<pre><code>
+var data = ['a', 'a', 1, 'b', 'b', 2, 'c', 'c', 3, 'd'],
+    // returns a normalised array with only unique items
+    result = array.unique(data);
+</code></pre>		</div>
+	</body>
+</html>
