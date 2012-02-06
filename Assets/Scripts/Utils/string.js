@@ -9,6 +9,6 @@ define(function(require){
 		toCamelCase: require('./String/toCamelCase'),
 		toHyphens: require('./String/toHyphens'),
 		truncate: require('./String/truncate')
-	}
+	};
 
 });

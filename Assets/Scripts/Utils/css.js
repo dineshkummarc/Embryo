@@ -11,6 +11,6 @@ define(function(require){
 		add: require('./CSS/addClass'),
 		remove: require('./CSS/removeClass'),
 		has: require('./CSS/hasClass')
-	}
+	};
 
 });

@@ -2,7 +2,7 @@ define(['Utils/when', 'Utils/swfobject', 'async!http://gdata.youtube.com/feeds/a
 
 	// Reference:
 	// http://perfectionkills.com/unnecessarily-comprehensive-look-into-a-rather-insignificant-issue-of-global-objects-creation/
-	var global = (function(){return this}()),
+	var global = (function(){return this;}()),
 		doc = document,
 		params, 
 		atts, 
@@ -23,7 +23,7 @@ define(['Utils/when', 'Utils/swfobject', 'async!http://gdata.youtube.com/feeds/a
 			(!!tmp) 
 				? (global.clearInterval(timer), dfd.resolve(tmp)) 
 				: null; 
-		}, 25);			
+		}, 25);		
 		
 		return dfd.promise;
 	}

@@ -17,3 +17,9 @@ body {
 .top {
 	top: 0;
 }
+
+/* Fixes issue with Documentation generation and the <code> blocks having extra margin space */
+.container.docs code {
+	display: block;
+	margin-top: -1.5em;
+}

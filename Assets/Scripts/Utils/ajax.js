@@ -198,7 +198,7 @@ define(['./isIE', './json'], function(isIE, JSON){
 			xhr.send(null);
 		}
 
-	}
+	};
 
 	return ajax;
 

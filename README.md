@@ -85,3 +85,17 @@ RequireJs Build Script
 --------------------
 
 I use a custom build script along with the RequireJs' `r.js` optimiser which minifies and concatenates all my scripts into a single file ready for production use.
+
+Documentation
+--------------------
+
+I use [Markdown](http://en.wikipedia.org/wiki/Markdown) language for writing my documentation (and also my blog posts) and use Node to convert them into HTML files. 
+
+Miller Medeiros has created [GH Markdown CLI](https://github.com/millermedeiros/gh-markdown-cli) which combines specific Node packages into a program which automates this process using a simple command via the terminal. I've also taken the design from GitHub's CSS to give my documentation a 'cleaner' look and feel.
+
+Have a read through the [Command.txt](https://github.com/Integralist/Project-Template-Files/blob/master/Assets/Documentation/Command.txt) file to see an example of how you could use it yourself.
+
+JS Hint
+--------------------
+
+I run my JavaScript through a lint program called [JS Hint](http://www.jshint.org/), but rather than manually process my scripts by hand (e.g. copy/paste each script into the website interface, see errors, fix them, copy/paste updated code to check errors are definitely fixed, rinse & repeat for each script file…) I use a Node package which helps automate this and makes testing my scripts for syntax errors a lot easier.
