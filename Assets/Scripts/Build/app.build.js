@@ -24,7 +24,8 @@
      */
     paths: {
         async: 'Plugins/async',
-        jquery: 'Utils/jquery'
+        jquery: 'Utils/jquery',
+        tpl: 'Plugins/tpl'
     },
     optimize: 'none',
     modules: [

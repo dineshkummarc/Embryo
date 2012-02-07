@@ -99,3 +99,8 @@ JS Hint
 --------------------
 
 I run my JavaScript through a lint program called [JS Hint](http://www.jshint.org/), but rather than manually process my scripts by hand (e.g. copy/paste each script into the website interface, see errors, fix them, copy/paste updated code to check errors are definitely fixed, rinse & repeat for each script file…) I use a Node package which helps automate this and makes testing my scripts for syntax errors a lot easier.
+
+CSS Lint
+--------------------
+
+I run my CSS through a lint program called [CSS Lint](http://csslint.net/), but rather than manually process my stylesheets by hand (e.g. copy/paste each stylesheet into the website interface, see errors, fix them, copy/paste updated code to check errors are definitely fixed, rinse & repeat for each stylesheet…) I use a Node package which helps automate this and makes testing my stylesheet for syntax errors a lot easier.
