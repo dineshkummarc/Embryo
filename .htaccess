@@ -1,22 +1,22 @@
 <IfModule pagespeed_module>
-	 # Turn on mod_pagespeed. To completely disable mod_pagespeed, you
-    # can set this to "off".
-    ModPagespeed on
+	# Turn on mod_pagespeed. To completely disable mod_pagespeed, you
+	# can set this to "off".
+	ModPagespeed on
 	 
-	 # Explicitly disables specific filters. This is useful in
-    # conjuction with ModPagespeedRewriteLevel. For instance, if one
-    # of the filters in the CoreFilters needs to be disabled for a
-    # site, that filter can be added to
-    # ModPagespeedDisableFilters. This directive contains a
-    # comma-separated list of filter names, and can be repeated.
-    #
-    ModPagespeedDisableFilters extend_cache,rewrite_javascript,outline_css,outline_javascript,inline_css,inline_javascript,combine_heads,elide_attributes,remove_quotes,move_css_to_head,add_instrumentation
-
-    # Explicitly enables specific filters. This is useful in
-    # conjuction with ModPagespeedRewriteLevel. For instance, filters
-    # not included in the CoreFilters may be enabled using this
-    # directive. This directive contains a comma-separated list of
-    # filter names, and can be repeated.
-    #
-    ModPagespeedEnableFilters remove_comments,collapse_whitespace,add_head,rewrite_css,combine_css,rewrite_images,insert_img_dimensions
+	# Explicitly disables specific filters. This is useful in
+	# conjuction with ModPagespeedRewriteLevel. For instance, if one
+	# of the filters in the CoreFilters needs to be disabled for a
+	# site, that filter can be added to
+	# ModPagespeedDisableFilters. This directive contains a
+	# comma-separated list of filter names, and can be repeated.
+	#
+	ModPagespeedDisableFilters extend_cache,rewrite_javascript,outline_css,outline_javascript,inline_css,inline_javascript,combine_heads,elide_attributes,remove_quotes,move_css_to_head,add_instrumentation
+	
+	# Explicitly enables specific filters. This is useful in
+	# conjuction with ModPagespeedRewriteLevel. For instance, filters
+	# not included in the CoreFilters may be enabled using this
+	# directive. This directive contains a comma-separated list of
+	# filter names, and can be repeated.
+	#
+	ModPagespeedEnableFilters remove_comments,collapse_whitespace,add_head,rewrite_css,combine_css,rewrite_images,insert_img_dimensions
 </IfModule>
