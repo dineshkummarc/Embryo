@@ -12,6 +12,7 @@ define(function(require){
 		map: require('./Array/map'),
 		reduce: require('./Array/reduce'),
 		reduceRight: require('./Array/reduceRight'),
+		toArray: require('./Array/toArray'),
 		unique: require('./Array/unique')
 	};
 
