@@ -5,6 +5,7 @@
 define(function(require){
 
 	return {
+		combine: require('./Array/combine'), 
 		filter: require('./Array/filter'),
 		forEach: require('./Array/forEach'),
 		indexOf: require('./Array/indexOf'),

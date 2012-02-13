@@ -23,6 +23,17 @@ define(['Utils/array'], function(array){
 });
 ```
 
+combine
+---
+
+```js 
+var data1 = ['a', 'b'],
+	data2 = ['b', 'd'];
+
+// modifies original array by copying over unique values from second Array
+array.combine(data1, data2); // => ['a', 'b', 'd']
+```
+
 filter
 ---
 

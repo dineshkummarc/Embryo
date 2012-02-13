@@ -17,6 +17,8 @@
 	# not included in the CoreFilters may be enabled using this
 	# directive. This directive contains a comma-separated list of
 	# filter names, and can be repeated.
-	#
-	ModPagespeedEnableFilters remove_comments,collapse_whitespace,add_head,rewrite_css,combine_css,rewrite_images,insert_img_dimensions
+
+	# NOTE: resize_mobile_images requires insert_img_dimensions and inline_preview_images
+	# lazyload_images (turn on if needed)
+	ModPagespeedEnableFilters extend_cache_images,remove_comments,collapse_whitespace,add_head,rewrite_css,combine_css,rewrite_images,convert_jpeg_to_webp,insert_img_dimensions,inline_preview_images,resize_mobile_images
 </IfModule>

@@ -3,5 +3,5 @@ https://github.com/millermedeiros/gh-markdown-cli
 Installation:
 sudo npm install gh-markdown-cli -g
 
-Usage:
+Usage (cd into 'Source' directory):
 mdown -o "../" --include "*.md" --header "../Template/header.html" --footer "../Template/footer.html"
