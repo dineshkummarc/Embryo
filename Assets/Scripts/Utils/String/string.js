@@ -6,9 +6,9 @@
 define(function(require){
 
 	return {
-		method: require('./Host/isHostMethod'),
-		collection: require('./Host/isHostCollection'),
-		object: require('./Host/isHostObject')
+		toCamelCase: require('./toCamelCase'),
+		toHyphens: require('./toHyphens'),
+		truncate: require('./truncate')
 	};
 
 });

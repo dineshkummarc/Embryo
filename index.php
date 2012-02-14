@@ -7,7 +7,7 @@
 		<meta name="description" content="" />
 		<meta name="author" content="" />
 		<title></title>
-		<script src="Assets/Scripts/Utils/html5.min.js"></script>
+		<script src="Assets/Scripts/Utils/Elements/html5.js"></script>
 		<link rel="stylesheet" href="Assets/Styles/normalise.css" />
 		<link rel="stylesheet" href="Assets/Styles/bootstrap.css" />
 		<link rel="stylesheet" href="Assets/Styles/structure.css" />

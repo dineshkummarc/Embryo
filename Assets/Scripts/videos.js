@@ -1,4 +1,4 @@
-define(['Utils/when', 'Utils/swfobject', 'async!http://gdata.youtube.com/feeds/api/videos?author=OfficialBasRutten&alt=json'], function(when, swf, videos){
+define(['Utils/Patterns/when', 'Utils/Flash/swfobject', 'async!http://gdata.youtube.com/feeds/api/videos?author=OfficialBasRutten&alt=json'], function(when, swf, videos){
 
 	// Reference:
 	// http://perfectionkills.com/unnecessarily-comprehensive-look-into-a-rather-insignificant-issue-of-global-objects-creation/

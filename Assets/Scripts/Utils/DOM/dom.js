@@ -5,10 +5,12 @@
  */
 define(function(require){
 
+	require('./insertAdjacentHTML');
+	require('./outerHTML');
+	
 	return {
-		toCamelCase: require('./String/toCamelCase'),
-		toHyphens: require('./String/toHyphens'),
-		truncate: require('./String/truncate')
+		elementSiblings: require('./elementSiblings'),
+		insertAfter: require('./insertAfter')
 	};
 
 });

@@ -1,4 +1,4 @@
-define(['Utils/ajax'], function(ajax){
+define(['Utils/XHR/ajax'], function(ajax){
 
 	// Test Suite (these can have multiple 'Specs' within them)
 	describe('AJAX test', function() {

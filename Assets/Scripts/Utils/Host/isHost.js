@@ -6,11 +6,9 @@
 define(function(require){
 
 	return {
-		docheight: require('./DOM/getDocHeight'),
-		el: require('./DOM/getEl'),
-		offset: require('./DOM/getOffset'),
-		tag: require('./DOM/getTag'),
-		type: require('./DOM/getType')
+		method: require('./isHostMethod'),
+		collection: require('./isHostCollection'),
+		object: require('./isHostObject')
 	};
 
 });

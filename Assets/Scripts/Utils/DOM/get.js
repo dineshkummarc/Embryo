@@ -6,11 +6,11 @@
 define(function(require){
 
 	return {
-		style: require('./CSS/getAppliedStyle'),
-		classes: require('./CSS/getArrayOfClassNames'),
-		add: require('./CSS/addClass'),
-		remove: require('./CSS/removeClass'),
-		has: require('./CSS/hasClass')
+		docheight: require('./getDocHeight'),
+		el: require('./getEl'),
+		offset: require('./getOffset'),
+		tag: require('./getTag'),
+		type: require('./getType')
 	};
 
 });

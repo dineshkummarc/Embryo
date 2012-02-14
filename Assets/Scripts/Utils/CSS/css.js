@@ -5,12 +5,13 @@
  */
 define(function(require){
 
-	require('./DOM/insertAdjacentHTML');
-	require('./DOM/outerHTML');
-	
 	return {
-		elementSiblings: require('./DOM/elementSiblings'),
-		insertAfter: require('./DOM/insertAfter')
+		style: require('./getAppliedStyle'),
+		classes: require('./getArrayOfClassNames'),
+		add: require('./addClass'),
+		remove: require('./removeClass'),
+		has: require('./hasClass'),
+		find: require('./sizzle')
 	};
 
 });

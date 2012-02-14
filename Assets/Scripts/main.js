@@ -9,7 +9,7 @@ require.config({
 	}
 });
 
-require(['errorhandler'], function(handler) {
+require(['ErrorHandler/errors'], function(handler) {
 	console.log('error handler loaded');
 	require.onError = handler;
 });
