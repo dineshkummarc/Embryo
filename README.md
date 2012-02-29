@@ -16,7 +16,7 @@ CSS
 
 The CSS is 'object-orientated' (OOCSS) as I feel that is the most scalable way to handle projects of any size.
 
-Although I disagree with the seemingly common tradition of using a CSS reset (mainly because nearly all of them take a 'scored earth policy' approach) I decided to use one. I chose to use the [normalise.css](https://github.com/necolas/normalize.css) reset. This was because it does a lot of things right (e.g. it leaves a lot of the default browser settings in place because they realise that you end up writing more CSS to work-around the reset than you would have written to work-around the browser defaults!) but also I only had to add two of my own customisations to it.
+I disagree with the seemingly common tradition of using a CSS reset (mainly because nearly all of them take a 'scored earth policy' approach). So instead I chose to use something similar but not quite a 'reset': [normalise.css](https://github.com/necolas/normalize.css) which normalises style settings across all browsers (and also fixes some rendering bugs). But what makes `normalise.css` so good is that it leaves a lot of the default browser settings in place because they realise that you end up writing more CSS to work-around the reset than you would have written to work-around the browser defaults! I only had a couple of my own customisations (personal preferences such as the amount of line-height spacing) otherwise the rest of it was fine for me to incorporate into my projects.
 
 I also liked the stylings for some of the elements (such as buttons, alert spans etc) from the [Twitter Bootstrap](https://github.com/twitter/bootstrap) framework, but I didn't want the entire framework - just those small items. So I took the framework and stripped out 95% of it.
 

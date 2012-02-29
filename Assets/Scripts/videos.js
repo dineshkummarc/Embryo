@@ -1,5 +1,14 @@
 define(['Utils/Patterns/when', 'Utils/Flash/swfobject', 'async!http://gdata.youtube.com/feeds/api/videos?author=OfficialBasRutten&alt=json'], function(when, swf, videos){
 
+	/*	
+	http://www.youtube.com/watch?v=-a3u7b4Pn7Q&feature=g-logo&context=G24226c5FOAAAAAAAAAA
+	http://www.youtube.com/watch?v=n7PDwmDlS7I&feature=context&context=G24226c5FOAAAAAAAAAA
+	http://www.youtube.com/watch?v=3zALVxhHTp8&feature=related
+	
+	Regex to match id: 
+	v=([^&]+)
+	*/
+	
 	// Reference:
 	// http://perfectionkills.com/unnecessarily-comprehensive-look-into-a-rather-insignificant-issue-of-global-objects-creation/
 	var global = (function(){return this;}()),
