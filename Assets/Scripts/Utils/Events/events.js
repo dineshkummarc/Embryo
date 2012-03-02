@@ -1,4 +1,4 @@
-define(['./Host/isHostMethod'], function(isHostMethod){
+define(['../Host/isHostMethod'], function(isHostMethod){
 
 	var events = {
 		
