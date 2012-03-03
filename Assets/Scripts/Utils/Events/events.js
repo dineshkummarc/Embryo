@@ -6,8 +6,8 @@ define(['../Host/isHostMethod'], function(isHostMethod){
 			var addEvent;
 			
 			if (isHostMethod(this, 'addEventListener')) {
-				addEvent = function(element, type, handler) {
-					element.addEventListener(type, handler, false);
+				addEvent = function(element, type, listener) {
+					element.addEventListener(type, listener, false);
 					return 'added';
 				};
 			} 
@@ -17,8 +17,8 @@ define(['../Host/isHostMethod'], function(isHostMethod){
 				- Value of 'this' is the global object [Window] not the element itself
 			
 			else if (isHostMethod(this, 'attachEvent')) {
-				addEvent = function(element, type, handler) {
-					element.attachEvent('on' + type, handler);
+				addEvent = function(element, type, listener) {
+					element.attachEvent('on' + type, listener);
 					return 'added';
 				};
 			} 
@@ -30,7 +30,7 @@ define(['../Host/isHostMethod'], function(isHostMethod){
 				 * Original: http://pointedears.de/websvn/filedetails.php?repname=JSX&path=%2Ftrunk%2Fdom%2Fevents.js
 				 * Reference: http://groups.google.com/group/comp.lang.javascript/browse_thread/thread/7f2a4731d991f6cd/2935311aaefb71ed?show_docid=2935311aaefb71ed
 				 */
-				addEvent = function(element, type, handler) {				
+				addEvent = function(element, type, listener) {				
 					var result = null,
 						event_type = "on" + type;
 					
@@ -104,7 +104,7 @@ define(['../Host/isHostMethod'], function(isHostMethod){
 					}
 					
 					listeners = oldListener._listeners;
-					listeners[listeners.length] = handler;
+					listeners[listeners.length] = listener;
 					
 					/* TODO: Why this way? */
 					element[event_type] = oldListener;
@@ -122,8 +122,8 @@ define(['../Host/isHostMethod'], function(isHostMethod){
 			var removeEvent;
 			
 			if (isHostMethod(this, 'removeEventListener')) {
-				removeEvent = function(element, type, handler) {
-					element.removeEventListener(type, handler, false);
+				removeEvent = function(element, type, listener) {
+					element.removeEventListener(type, listener, false);
 					return 'removed';
 				};
 			}
@@ -133,14 +133,14 @@ define(['../Host/isHostMethod'], function(isHostMethod){
 				- Value of 'this' is the global object [Window] not the element itself
 			
 			else if (isHostMethod(this, 'detachEvent')) {
-				removeEvent = function(element, type, handler) {
-					element.detachEvent('on' + type, handler);
+				removeEvent = function(element, type, listener) {
+					element.detachEvent('on' + type, listener);
 					return 'removed';
 				};
 			} 
 			*/
 			else {
-				removeEvent = function(element, type, handler) {
+				removeEvent = function(element, type, listener) {
 					var result = false,
 						event_type = "on" + type;
 					
@@ -148,25 +148,25 @@ define(['../Host/isHostMethod'], function(isHostMethod){
 					if (element && type) {
 						// If the supplied element has the specified event type
 						if (isHostMethod(element, event_type)) {
-							// Grab list of handler functions associated with this event
+							// Grab list of listener functions associated with this event
 							var list = element[event_type],
 								listeners = list._listeners;
 				      
 				      		// Precaution to make sure a list was returned
 							if (listeners) {
-								// Loop through each associated handler function to see if the handler argument matches
+								// Loop through each associated listener function to see if the listener argument matches
 								for (var i = listeners.length; i--;) {
-									// If it does then delete that handler function from the list
-									if (listeners[i] == handler) {
+									// If it does then delete that listener function from the list
+									if (listeners[i] == listener) {
 										delete listeners[i];
 										result = (typeof listeners[i] == "undefined");
 									}
 								}
 							} 
-							// If only one handler (i.e. no list of handlers) then just set that handler to null so the event type is completely removed
+							// If only one listener (i.e. no list of listeners) then just set that listener to null so the event type is completely removed
 							else {
-								handler = element[event_type] = null;
-								result = (handler == null);
+								listener = element[event_type] = null;
+								result = (listener == null);
 							}
 				    	}
 					}

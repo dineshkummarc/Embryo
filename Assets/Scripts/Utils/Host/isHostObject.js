@@ -11,6 +11,7 @@ define(function(){
 		// object[property] protects against ES3 specification which allows null to be typeof 'object'
 		// so we check if 'object' is returned and that object[property] coerces to true
 		// then we group both checks (&& operator returns 2nd expression if 1st expression evaluates to true) and convert result into boolean
+		// e.g. typeof(document['body']) == 'object' && document['body'] will return document['body'] which will coerce to boolean to see if it exists
 		return !!(typeof(object[property]) == 'object' && object[property]);
 	}
 

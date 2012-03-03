@@ -15,9 +15,9 @@ define(function(){
 	function isHostMethod(object, property) {
 		var type = typeof object[property];
 
-		return type == 'function' || // For Safari 3 typeof result being 'function' instead of 'object'
+		return type == 'function' || // This is what we're expecting to be returned (as we're checking for a method)
 			   (type == 'object' && !!object[property]) || // Protect against ES3 'null' typeof result being 'object'
-			   type == 'unknown' || // For IE < 9 when Microsoft used ActiveX objects for Native Functions
+			   type == 'unknown' || // For IE < 9 when Microsoft used ActiveX objects for Native Functions, 'unknown' would be returned for the properties we're checking against
 			   type == 'string'; // typeof for 'document.body[outerHTML]' results in 'string'
 	}
 
