@@ -3,13 +3,13 @@
   * https://github.com/ded/morpheus - (c) Dustin Diaz 2011
   * License MIT
   */
-(function(define) {
-define('morpheus',[], function() {
+define(function() {
 
   var context = this
     , doc = document
     , win = window
     , html = doc.documentElement
+    , thousand = 1000
     , rgbOhex = /^rgb\(|#/
     , relVal = /^([+\-])=([\d\.]+)/
     , numUnit = /^(?:[\+\-]=)?\d+(?:\.\d+)?(%|in|cm|mm|em|ex|pt|pc|px)$/
@@ -76,9 +76,39 @@ define('morpheus',[], function() {
           function (callback) {
             win.setTimeout(function () {
               callback(+new Date())
-            }, 10)
+            }, 11) // these go to eleven
           }
       }()
+    , children = []
+
+  function has(array, elem, i) {
+    if (Array.prototype.indexOf) return array.indexOf(elem)
+    for (i = 0; i < array.length; ++i) {
+      if (array[i] === elem) return i
+    }
+  }
+
+  function render(t) {
+    var i, found, count = children.length
+    for (i = count; i--;) {
+      children[i](t)
+      found = true
+    }
+    found && frame(render)
+  }
+
+  function live(f) {
+    if (children.push(f) === 1) render()
+  }
+
+  function die(f) {
+    var i, rest, index = has(children, f)
+    if (index >= 0) {
+      rest = children.slice(index+1)
+      children.length = index
+      children = children.concat(rest)
+    }
+  }
 
   function parseTransform(style, base) {
     var values = {}, m
@@ -106,7 +136,7 @@ define('morpheus',[], function() {
   function toHex(c) {
     var m = /rgba?\((\d+),\s*(\d+),\s*(\d+)/.exec(c)
     return (m ? rgb(m[1], m[2], m[3]) : c)
-      .replace(/#(\w)(\w)(\w)$/, '#$1$1$2$2$3$3') // short to long
+      .replace(/#(\w)(\w)(\w)$/, '#$1$1$2$2$3$3') // short skirt to long jacket
   }
 
   // change font-size => fontSize etc.
@@ -116,6 +146,7 @@ define('morpheus',[], function() {
     })
   }
 
+  // aren't we having it?
   function fun(f) {
     return typeof f == 'function'
   }
@@ -135,26 +166,27 @@ define('morpheus',[], function() {
       // default to a pleasant-to-the-eye easeOut (like native animations)
       return Math.sin(t * Math.PI / 2)
     }
-    var time = duration || 1000
+    var time = duration || thousand
+      , self = this
       , diff = to - from
       , start = +new Date()
       , stop = 0
       , end = 0
-    frame(run)
+    live(run)
 
     function run(t) {
       var delta = t - start
       if (delta > time || stop) {
         to = isFinite(to) ? to : 1
         stop ? end && fn(to) : fn(to)
-        return done && done()
+        die(run)
+        return done && done.apply(self)
       }
       // if you don't specify a 'to' you can use tween as a generic delta tweener
       // cool, eh?
       isFinite(to) ?
         fn((diff * ease(delta / time)) + from) :
         fn(ease(delta / time))
-      frame(run)
     }
     return {
       stop: function (jump) {
@@ -191,7 +223,7 @@ define('morpheus',[], function() {
 
   // this gets you the next hex in line according to a 'position'
   function nextColor(pos, start, finish) {
-    var r = [], i, e
+    var r = [], i, e, from, to
     for (i = 0; i < 6; i++) {
       from = Math.min(15, parseInt(start.charAt(i),  16))
       to   = Math.min(15, parseInt(finish.charAt(i), 16))
@@ -207,14 +239,14 @@ define('morpheus',[], function() {
     if (k == 'transform') {
       v = {}
       for(var t in begin[i][k]) {
-        v[t] = (t in end[i][k]) ? Math.round(((end[i][k][t] - begin[i][k][t]) * pos + begin[i][k][t]) * 1000) / 1000 : begin[i][k][t]
+        v[t] = (t in end[i][k]) ? Math.round(((end[i][k][t] - begin[i][k][t]) * pos + begin[i][k][t]) * thousand) / thousand : begin[i][k][t]
       }
       return v
     } else if (typeof begin[i][k] == 'string') {
       return nextColor(pos, begin[i][k], end[i][k])
     } else {
       // round so we don't get crazy long floats
-      v = Math.round(((end[i][k] - begin[i][k]) * pos + begin[i][k]) * 1000) / 1000
+      v = Math.round(((end[i][k] - begin[i][k]) * pos + begin[i][k]) * thousand) / thousand
       // some css properties don't require a unit (like zIndex, lineHeight, opacity)
       if (!(k in unitless)) v += units[i][k] || 'px'
       return v
@@ -317,7 +349,7 @@ define('morpheus',[], function() {
       }
     }
     // ONE TWEEN TO RULE THEM ALL
-    return tween(duration, function (pos, v, xy) {
+    return tween.apply(els, [duration, function (pos, v, xy) {
       // normally not a fan of optimizing for() loops, but we want something
       // fast for animating
       for (i = els.length; i--;) {
@@ -335,7 +367,7 @@ define('morpheus',[], function() {
               (els[i].style[camelize(k)] = v)
         }
       }
-    }, complete, ease)
+    }, complete, ease])
   }
 
   // expose useful methods
@@ -347,15 +379,6 @@ define('morpheus',[], function() {
   morpheus.formatTransform = formatTransform
   morpheus.easings = {}
 
-  return morpheus
+  return morpheus;
 
-}); // define
-})(typeof define != 'undefined'
-    // use define for AMD if available
-    ? define
-    // If no define, look for module to export as a CommonJS module.
-    // If no define or module, attach to current context.
-    : typeof module != 'undefined'
-    ? function(deps, factory) { module.exports = factory(); }
-    : function(deps, factory) { this.when = factory(); }
-);
+});

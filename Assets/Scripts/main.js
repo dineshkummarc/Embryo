@@ -14,4 +14,23 @@ require(['ErrorHandler/errors'], function(handler) {
 	require.onError = handler;
 });
 
-require(['videos', 'twitter']);
+require(['Utils/Animation/easings', 'Utils/Animation/morpheus', 'videos', 'twitter'], function (easings, morpheus) {
+
+	// Animation example (using Morpheus)
+	
+	var header = document.getElementsByTagName('h1')[0];	
+	header.style.position = "relative";
+		
+	morpheus(header, {
+		backgroundColor: '#00f',
+		duration: 3000,
+		opacity: 0.5,
+		color: '#ff0000',
+		left: 400,
+		easing: easings.bounce,
+		complete: function () {
+        	alert('animation finished');
+        }
+	});
+
+});
