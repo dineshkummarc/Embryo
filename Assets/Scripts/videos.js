@@ -1,4 +1,4 @@
-define(['Utils/Patterns/when', 'Utils/Flash/swfobject', 'async!http://gdata.youtube.com/feeds/api/videos?author=OfficialBasRutten&alt=json'], function(when, swf, videos){
+define(["Utils/Patterns/when", "Utils/Flash/swfobject", "async!http://gdata.youtube.com/feeds/api/videos?author=OfficialBasRutten&alt=json"], function (when, swf, videos) {
 
 	/*	
 	http://www.youtube.com/watch?v=-a3u7b4Pn7Q&feature=g-logo&context=G24226c5FOAAAAAAAAAA
@@ -18,14 +18,14 @@ define(['Utils/Patterns/when', 'Utils/Flash/swfobject', 'async!http://gdata.yout
 		doc = document,
 		params, 
 		atts, 
-		id = videos.feed.entry[0].id.$t.split('videos/')[1],
-		flash = doc.createElement('div'),
-		container = doc.getElementsByTagName('div')[0];
+		id = videos.feed.entry[0].id.$t.split("videos/")[1],
+		flash = doc.createElement("div"),
+		container = doc.getElementsByTagName("div")[0];
 
 	function async(template) {
 		var dfd = when.defer(),
 			tmp = template({ 
-				title: 'Flash content inserted via JavaScript using a template to render content'
+				title: "Flash content inserted via JavaScript using a template to render content"
 			}),
 			timer;
 		
@@ -41,28 +41,28 @@ define(['Utils/Patterns/when', 'Utils/Flash/swfobject', 'async!http://gdata.yout
 	}
 		
 	function handler() {
-        require(['tpl!../Templates/Video.tpl'], function(template) {
+        require(["tpl!../Templates/Video.tpl"], function(template) {
 			// wait for async to finish templating
             when(async(template), function(htmlFragment) {
 				var frag = doc.createDocumentFragment(),
-					div = doc.createElement('div');
+					div = doc.createElement("div");
 				
 				// Insert 'confirmation' header into page above the Flash file
 				div.innerHTML = htmlFragment;
 				frag.appendChild(div);
-				container.insertBefore(frag, doc.getElementById('currentvideo'));
+				container.insertBefore(frag, doc.getElementById("currentvideo"));
             });
         });
 	}
 	
-	flash.id = 'insertflash';
-	atts = { id: 'currentvideo' };
+	flash.id = "insertflash";
+	atts = { id: "currentvideo" };
 	
 	container.appendChild(flash);
 	
 	// YouTube JavaScript API
 	// https://developers.google.com/youtube/js_api_reference
-	swf.embedSWF('http://www.youtube.com/v/' + id + '?enablejsapi=1&playerapiid=ytplayer&version=3', 'insertflash', '270', '150', '8', null, null, null, atts, handler);
+	swf.embedSWF("http://www.youtube.com/v/" + id + "?enablejsapi=1&playerapiid=ytplayer&version=3", "insertflash", "270", "150", "8", null, null, null, atts, handler);
 	
 	
 	
