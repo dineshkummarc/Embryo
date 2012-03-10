@@ -147,14 +147,17 @@ define(['../Checks/isIE', '../Polyfills/json'], function(isIE, JSON){
 		
 		// Watch for when the state of the document gets updated
 		xhr.onreadystatechange = function() {
+		
+            // Within onreadystatechange we reference 'this' instead of 'xhr' 
+            // this is to prevent memory leaks in IE < 9 which would otherwise keep an internal reference to xhr
 			
 			// Wait until the data is fully loaded, and make sure that the request hasn't already timed out
-			if (xhr.readyState == 4 && !requestDone) {
+			if (this.readyState == 4 && !requestDone) {
 				
 				// Check to see if the request was successful
-				if (httpSuccess(xhr)) {
+				if (httpSuccess(this)) {
 					// Execute the success callback
-					config.onSuccess(httpData(xhr, config.dataType));
+					config.onSuccess(httpData(this, config.dataType));
 				}
 				
 				/**
@@ -164,7 +167,7 @@ define(['../Checks/isIE', '../Polyfills/json'], function(isIE, JSON){
 				 * So when the httpSuccess expression used in the above condition returns false we need to execute the onError handler.
 				 */
 				else {
-					config.onError(xhr);
+					config.onError(this);
 				}
 	
 				// Call the completion callback
@@ -172,15 +175,15 @@ define(['../Checks/isIE', '../Polyfills/json'], function(isIE, JSON){
 				
 				// Clean up after ourselves (+ help to avoid memory leaks)
 				clearTimeout(xhrTimeout);
-				xhr.onreadystatechange = null;
+				this.onreadystatechange = null;
 				xhr = null;
 				
-			} else if (requestDone && xhr.readyState != 4) {
+			} else if (requestDone && this.readyState != 4) {
 				// If the script timed out then keep a log of it so the developer can query this and handle any exceptions
 				errors.push(url + " { timed out } ");
 				
 				// Bail out of the request immediately
-				xhr.onreadystatechange = null;
+				this.onreadystatechange = null;
 				xhr = null;
 			}
 			
