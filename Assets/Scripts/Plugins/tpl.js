@@ -16,7 +16,7 @@
 
 (function () {
 //>>excludeStart('excludeTpl', pragmas.excludeTpl)
-	var progIds = ['Msxml2.XMLHTTP', 'Microsoft.XMLHTTP', 'Msxml2.XMLHTTP.4.0'],
+	var progIds = ["Msxml2.XMLHTTP", "Microsoft.XMLHTTP", "Msxml2.XMLHTTP.4.0"],
 	
 		xmlRegExp = /^\s*<\?xml(\s)+version=[\'\"](\d)*.(\d)*[\'\"](\s)*\?>/im,
 		
@@ -69,7 +69,7 @@
 			get = function (url, callback) {
 				
 				var xhr = tpl.createXhr();
-				xhr.open('GET', url, true);
+				xhr.open("GET", url, true);
 				xhr.onreadystatechange = function (evt) {
 					//Do not explicitly handle errors, those should be
 					//visible via console output in the browser.
@@ -83,15 +83,15 @@
  				process.versions &&
  				!!process.versions.node) {
 			//Using special require.nodeRequire, something added by r.js.
-			fs = require.nodeRequire('fs');
+			fs = require.nodeRequire("fs");
 
 			get = function (url, callback) {
 				
-				callback(fs.readFileSync(url, 'utf8'));
+				callback(fs.readFileSync(url, "utf8"));
 			};
 		}
 		return tpl = {
-			version: '0.24.0',
+			version: "0.24.0",
 			strip: function (content) {
 				//Strips <?xml ...?> declarations so that external SVG and XML
 				//documents can be added to a document without worry. Also, if the string

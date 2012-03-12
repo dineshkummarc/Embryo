@@ -20,5 +20,5 @@
 
 	# NOTE: resize_mobile_images requires insert_img_dimensions and inline_preview_images
 	# lazyload_images (turn on if needed)
-	ModPagespeedEnableFilters extend_cache_images,remove_comments,collapse_whitespace,add_head,rewrite_css,combine_css,rewrite_images,convert_jpeg_to_webp,insert_img_dimensions,inline_preview_images,resize_mobile_images
+	ModPagespeedEnableFilters extend_cache_images,remove_comments,collapse_whitespace,add_head,rewrite_css,flatten_css_imports,combine_css,rewrite_images,convert_jpeg_to_webp,insert_img_dimensions,inline_preview_images,resize_mobile_images
 </IfModule>
