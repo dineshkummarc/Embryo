@@ -6,9 +6,9 @@
 define(function(require){
 
 	return {
-		method: require('./isHostMethod'),
-		collection: require('./isHostCollection'),
-		object: require('./isHostObject')
+		method: require("./isHostMethod"),
+		collection: require("./isHostCollection"),
+		object: require("./isHostObject")
 	};
 
 });

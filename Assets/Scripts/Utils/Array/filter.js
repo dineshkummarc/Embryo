@@ -1,4 +1,4 @@
-define(['./forEach'], function (forEach) {
+define(["./forEach"], function (forEach) {
 
     /**
      * ES5 Array.filter

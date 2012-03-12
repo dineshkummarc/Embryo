@@ -12,7 +12,7 @@
  * Version: 1.0.1
  * Note: Requires jquery 1.2 or above from version 1.0.1
  */
-define(['jquery'], function($){
+define(["jquery"], function($){
 	
 	$.fn.jCarouselLite = function(o) {
 			

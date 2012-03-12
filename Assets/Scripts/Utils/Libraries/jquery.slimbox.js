@@ -4,7 +4,7 @@
 	MIT-style license.
 */
 
-define(['jquery'], function($){
+define(["jquery"], function($){
 	
 	// Global variables, accessible to Slimbox only
 	var win = $(window), options, images, activeImage = -1, activeURL, prevImage, nextImage, compatibleOverlay, middle, centerWidth, centerHeight,

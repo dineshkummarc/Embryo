@@ -1,4 +1,4 @@
-define(['./indexOf'], function (indexOf) {
+define(["./indexOf"], function (indexOf) {
 
     /**
 	 * Combines an array with all the items of another.

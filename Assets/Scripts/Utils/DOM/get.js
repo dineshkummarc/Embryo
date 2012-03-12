@@ -6,11 +6,11 @@
 define(function(require){
 
 	return {
-		docheight: require('./getDocHeight'),
-		el: require('./getEl'),
-		offset: require('./getOffset'),
-		tag: require('./getTag'),
-		type: require('./getType')
+		docheight: require("./getDocHeight"),
+		el: require("./getEl"),
+		offset: require("./getOffset"),
+		tag: require("./getTag"),
+		type: require("./getType")
 	};
 
 });

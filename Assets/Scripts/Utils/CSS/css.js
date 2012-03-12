@@ -6,12 +6,12 @@
 define(function(require){
 
 	return {
-		style: require('./getAppliedStyle'),
-		classes: require('./getArrayOfClassNames'),
-		add: require('./addClass'),
-		remove: require('./removeClass'),
-		has: require('./hasClass'),
-		find: require('./sizzle')
+		style: require("./getAppliedStyle"),
+		classes: require("./getArrayOfClassNames"),
+		add: require("./addClass"),
+		remove: require("./removeClass"),
+		has: require("./hasClass"),
+		find: require("./sizzle")
 	};
 
 });

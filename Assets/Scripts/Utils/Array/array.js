@@ -5,16 +5,16 @@
 define(function(require){
 
 	return {
-		combine: require('./combine'), 
-		filter: require('./filter'),
-		forEach: require('./forEach'),
-		indexOf: require('./indexOf'),
-		lastIndexOf: require('./lastIndexOf'),
-		map: require('./map'),
-		reduce: require('./reduce'),
-		reduceRight: require('./reduceRight'),
-		toArray: require('./toArray'),
-		unique: require('./unique')
+		combine: require("./combine"), 
+		filter: require("./filter"),
+		forEach: require("./forEach"),
+		indexOf: require("./indexOf"),
+		lastIndexOf: require("./lastIndexOf"),
+		map: require("./map"),
+		reduce: require("./reduce"),
+		reduceRight: require("./reduceRight"),
+		toArray: require("./toArray"),
+		unique: require("./unique")
 	};
 
 });
