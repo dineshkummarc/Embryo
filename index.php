@@ -9,9 +9,7 @@
 		<title></title>
 		<script src="Assets/Scripts/Utils/Elements/html5.js"></script>
 		<link rel="author" href="humans.txt" type="text/plain">
-		<link rel="stylesheet" href="Assets/Styles/normalise.css" />
-		<link rel="stylesheet" href="Assets/Styles/bootstrap.css" />
-		<link rel="stylesheet" href="Assets/Styles/structure.css" />
+    	<link rel="stylesheet" href="Assets/Styles/build.css" />
 		<!-- 
 		As of 24/01/2012 modpagespeed fails to minify stylesheets that include @media declarations so we keep them separate.
 		We could include them an then manually minify the files, that's not a problem but I chose this way as it was clearer that the following styles were for WebKit.
@@ -21,7 +19,25 @@
 	<?php flush(); ?>
 	<body>
 		<?php require 'Assets/Includes/IE6.php'; ?>
-		<div class="container">
+		<ol class="hoz">
+			<li><a href="/">Test</a></li>
+			<li><a href="/about/">Test 2</a></li>
+			<li><a href="/about/us/">Test 3</a></li>
+		</ol>
+		<span class="contain" style="border:1px solid red;">
+			This is a <code>div</code> with a class of <code>contain</code>.
+		</span>
+		<div class="media" style="border:1px solid blue;">
+			<a href="http://twitter.com/stubbornella" class="img">
+				<img src="Assets/Images/forkme.png" alt="me" />
+			</a>
+			<div class="body">
+				<p>This is a media object</p>
+				<p>Concept from Stubbornella</p>
+				<p>Might need a min-height set depending on your requirements</p>
+			</div>
+		</div>
+    	<div class="container">
 			<a href="https://github.com/Integralist/Project-Template-Files#readme" class="abs right top"><img src="Assets/Images/forkme.png"></a>
 			<h1>Project Template</h1>
 			<h2>Description</h2>		

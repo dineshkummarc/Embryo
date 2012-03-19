@@ -20,7 +20,7 @@ define(["Utils/Patterns/when", "Utils/Flash/swfobject", "async!http://gdata.yout
 		atts, 
 		id = videos.feed.entry[0].id.$t.split("videos/")[1],
 		flash = doc.createElement("div"),
-		container = doc.getElementsByTagName("div")[0];
+		container = doc.getElementsByTagName("div")[2];
 
 	function async(template) {
 		var dfd = when.defer(),

@@ -19,7 +19,8 @@ require(["Utils/Animation/easings", "Utils/Animation/morpheus", "Utils/XHR/ajax"
 	// Animation example (using Morpheus)
 	
 	var header = document.getElementsByTagName("h1")[0];
-	header.style.position = "relative";
+	header.style.position = "absolute";
+	header.parentNode.style.paddingTop = "83px";	
 		
 	morpheus(header, {
 		backgroundColor: "#00f",
