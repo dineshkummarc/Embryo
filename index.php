@@ -8,6 +8,7 @@
 		<meta name="author" content="" />
 		<title></title>
 		<script src="Assets/Scripts/Utils/Elements/html5.js"></script>
+		<link rel="author" href="humans.txt" type="text/plain">
 		<link rel="stylesheet" href="Assets/Styles/normalise.css" />
 		<link rel="stylesheet" href="Assets/Styles/bootstrap.css" />
 		<link rel="stylesheet" href="Assets/Styles/structure.css" />
