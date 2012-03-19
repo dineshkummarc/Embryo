@@ -4,6 +4,7 @@
    Author     : digitalia.be
    Description: Required to apply the 'lightbox' styles to the gallery popup images
 */
+
 #lbOverlay {
   position: fixed;
   z-index: 9999;

@@ -1,0 +1,34 @@
+/* =============================================================================
+   Labels
+   ========================================================================== */
+
+.label {
+	background-color: #bfbfbf;
+	color: #fff;
+	font-size: 65%;
+	font-weight: bold;
+	padding: 1px 3px 2px;
+	text-shadow: none;
+	text-transform: uppercase;
+	white-space: nowrap;
+	
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.label.important {
+	background-color: #c43c35;
+}
+
+.label.warning {
+	background-color: #f89406;
+}
+
+.label.success {
+	background-color: #46a546;
+}
+
+.label.notice {
+	background-color: #62cffc;
+}
