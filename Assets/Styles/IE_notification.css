@@ -1,8 +1,8 @@
 /*
 	Author		: Mark McDonnell
-	Document	: IE6_notification
+	Document	: IE_notification
 	Created on	: 20-08-2011
-	Description	: Displays a warning message to Internet Explorer 6 users
+	Description	: Displays a warning message to Internet Explorer 7- users
 */
 
 body, html { 
@@ -22,27 +22,27 @@ body, html {
 }
 
 #ie-message {
-	background: #C00; 
-	border: 10px solid #F00; 
-	color: #fff;
-	height: 110px;
+	height: 144px;
 	left: 50%;
-	margin: 0 0 0 -380px;
-	padding-top: 90px; 
+	margin: 0 0 0 -272px;
 	position: relative; 
-	text-align: center; 
-	top: 30%;
-	width: 760px; 
+	top: 40%;
+	width: 545px;
 	z-index: 1000;
 }
 
-#ie-message a { 
-	color: #fff; 
+#ie-message span {
+	font-size: 120%;
+	left: 0px;
+	position: absolute;
+	text-align: center;
+	top: 63px;
+	width: 545px;
 }
 
-#ie-message a:hover,
-#ie-message a:focus { 
-	text-decoration: none; 
+#ie-message a {
+	color: #fff;
+	text-decoration: none;
 }
 
 select { 

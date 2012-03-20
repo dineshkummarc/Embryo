@@ -18,7 +18,7 @@
 	</head>
 	<?php flush(); ?>
 	<body>
-		<?php require 'Assets/Includes/IE6.php'; ?>
+		<?php require 'Assets/Includes/IE.php'; ?>
 		<ol class="hoz">
 			<li><a href="/">Test</a></li>
 			<li><a href="/about/">Test 2</a></li>
