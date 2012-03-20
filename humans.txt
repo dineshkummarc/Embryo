@@ -4,5 +4,5 @@
 /* TEAM */
 Company Name: Developer A, Developer B, Developer C
 Site: http://www.domain.tld/
-Twitter: http://twitter.com/#!/username
+Twitter: http://twitter.com/username
 Location: Address
