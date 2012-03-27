@@ -23,7 +23,7 @@ I also liked the stylings for some of the elements (such as buttons, alert spans
 Sass
 --------------------
 
-I've started utilising [Sass](http://sass-lang.com/) - being someone who hated the idea of pre-processors (and complained about their failings and how writing OOCSS could resolve a lot of those issues) I appreciate there are some things they do very well that can't be replicated. Plus, knowing all their failings you are better equipped to avoid them when using a pre-processor (if you don't understand the issues with using a pre-processor then I advise you to read my post about [using Sass](https://github.com/Integralist/Blog-Posts/blob/master/Guide-to-using-SASS.md) OR to not use a pre-processor.
+I've started utilising [Sass](http://sass-lang.com/) - being someone who hated the idea of pre-processors (and complained about their failings and how writing OOCSS could resolve a lot of those issues) I appreciate there are some things they do very well that can't be replicated. Plus, knowing all their failings you are better equipped to avoid them when using a pre-processor (if you don't understand the issues with using a pre-processor then I advise you to read my post about [using Sass](https://github.com/Integralist/Blog-Posts/blob/master/Guide-to-using-SASS.md) OR to not use a pre-processor).
 
 Browser inconsistencies
 --------------------
