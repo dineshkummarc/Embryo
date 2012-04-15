@@ -16,9 +16,7 @@ CSS
 
 The CSS is 'object-orientated' (OOCSS) as I feel that is the most scalable way to handle projects of any size.
 
-I disagree with the seemingly common tradition of using a CSS reset (mainly because nearly all of them take a 'scored earth policy' approach). So instead I chose to use something similar but not quite a 'reset': [normalise.css](https://github.com/necolas/normalize.css) which normalises style settings across all browsers (and also fixes some rendering bugs). But what makes `normalise.css` so good is that it leaves a lot of the default browser settings in place because they realise that you end up writing more CSS to work-around the reset than you would have written to work-around the browser defaults! I only had a couple of my own customisations (personal preferences such as the amount of line-height spacing) otherwise the rest of it was fine for me to incorporate into my projects.
-
-I also liked the stylings for some of the elements (such as buttons, alert spans etc) from the [Twitter Bootstrap](https://github.com/twitter/bootstrap) framework, but I didn't want the entire framework - just those small items. So I took the framework and stripped out 95% of it.
+I disagree with the seemingly common tradition of using a CSS reset (mainly because nearly all of them take a 'scored earth policy' approach). So instead I chose to use something similar but not quite a 'reset': [normalise.css](https://github.com/necolas/normalize.css) which normalises style settings across all browsers (and also fixes some rendering bugs). But what makes normalise so good is that it leaves a lot of the default browser settings in place, because they realise that you end up writing more CSS to work-around the reset than you would have written to work-around the browser defaults! I only had a couple of my own customisations (personal preferences such as the amount of line-height spacing) otherwise the rest of it was fine for me to incorporate into my projects.
 
 Sass
 --------------------
@@ -32,16 +30,18 @@ We all know that browsers render both CSS and JavaScript differently depending o
 
 * Write CSS so it works with Firefox
 * Use `IE Conditional Comments` to target IE issues**
-* Use `@media` hack to target WebKit browsers
+* Use `@media` hack to target WebKit browsers++
 
-***I appreciate that IE10 no longer supports conditional comments but fingers crossed IE10's CSS engine just works the way we want it to*
+***I appreciate that IE10 no longer supports conditional comments but IE10's CSS engine should hopefully by then just work!*
+
+*++It's very rare I have to target a WebKit browser, but once in a blue moon there is a difference in design that I just can't ignore*
 
 JavaScript
 --------------------
 
 I write all my JavaScript to be compatible with the `AMD` module format.
 
-There are a couple of scripts I rarely use nowadays, these being: jQuery (+ two plugins) & SWFObject, but I've included them for those odd occasions where they are needed (normally by the team I manage at work who also use my set-up).
+There are a couple of scripts I rarely use nowadays, these being: jQuery (+ two plugins) & SWFObject, but I've included them anyway.
 
 Here is a round-up of some of the scripts and 'modules' used in this project template:
 

@@ -7,7 +7,9 @@
 		<meta name="description" content="" />
 		<meta name="author" content="" />
 		<title></title>
+		<!--[if lt IE 9]>
 		<script src="Assets/Scripts/Utils/Elements/html5.js"></script>
+		<![endif]-->
 		<link rel="author" href="humans.txt" type="text/plain">
     	<link rel="stylesheet" href="Assets/Styles/build.css" />
 		<!-- 
