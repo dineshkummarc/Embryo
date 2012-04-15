@@ -2,9 +2,9 @@ define(['../Checks/isIE', '../Polyfills/json'], function(isIE, JSON){
 
 	// Note: wasn't able to require() in the json.js script for browsers that don't support it
 	// As it would load asynchronusly and the below callback function would have executed before the json.js was loaded
-	// I could have used when.js to handle this situation but seems a bit OTT.
-	// I could also of have had one if statement at the top of this module which checked for support and forked there but I didn't like the idea of having all my code in an else statement
-	// So decided to just load the script for all users (once it's minified and gzip'ed it shouldn't be much of a performance issue).
+	// I could have used when.js to handle this situation but seemed a bit OTT.
+	// I also could have had one if statement at the top of this module which checked for support and forked there but I didn't like the idea of having all the rest of my code in an else statement
+	// Because I didn't see this as a massive performance concern (after minification and GZIP'ing) I decided to just load the script for all users.
 
 	// Used by ajax method to store errors
 	var errors = [];

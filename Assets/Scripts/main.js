@@ -19,6 +19,9 @@ require(["Utils/Animation/easings", "Utils/Animation/morpheus", "Utils/XHR/ajax"
 	// Animation example (using Morpheus)
 	
 	var header = document.getElementsByTagName("h1")[0];
+	
+	// Realistically you would style this element via CSS not inline styles via Js
+	// I'm just hacking this together as a quick example!
 	header.style.position = "absolute";
 	header.parentNode.style.paddingTop = "83px";	
 		
