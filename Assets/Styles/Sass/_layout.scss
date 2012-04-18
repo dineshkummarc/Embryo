@@ -3,111 +3,19 @@
    Divide the page into sections. Layouts hold one or more modules together.
    ========================================================================== */
    
-// ClearFix - http://www.nicolasgallagher.com/micro-clearfix-hack/
-.cf {
-	zoom:1; // IE6/7
-}
-
-.cf:before,
-.cf:after {
-	content: "";
-	display: table;
-}
-
-.cf:after {
-	clear: both;
-}
-
-// Media Block - http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/
-.media {
-	display: block;
-}
-
-.media .img {
-	float: left;
-	margin-right: 10px;
-}
-
-.media .body {
-	overflow: hidden;
-	margin-bottom: 0;
-}
-
-// Hoz Block (Horizontal) - http://csswizardry.com/2011/09/the-nav-abstraction/
-.hoz {
-	list-style: none;
-	padding-left: 0;
-}
-
-.hoz,
-.hoz dd {
-	margin-left: 0;
-}
-
-.hoz li,
-.hoz dt,
-.hoz dd {
-	display: inline;
-}
-
-.hoz a {
-	display: inline-block;
-}
-
-// Image Replacement - http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacement/
-.hidden {
-	text-indent: 100%;
-	white-space: nowrap;
-	overflow: hidden;
-}
-
-// Alternative Image Replacement (more complicated) - https://github.com/h5bp/html5-boilerplate/commit/aa0396eae757c9e03dda4e463fb0d4db5a5f82d7
 /*
-.hidden {
-	background-color: transparent;
-	border: 0;
-	color: transparent;
-	font: 0/0 a;
-	text-shadow: none;
-}
+	e.g.
+	.l-grid
+	.l-fixed
+	.l-inline
+	.l-flipped
  */
 
-// Container Block
-.contain {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	padding: 0 10px;
-	max-width: 940px;
-	width: 90%;
-}
-   
-/* =============================================================================
-   TEMP Layout styles which are only relevant to the test HTML/PHP page
-   ========================================================================== */
- 
 body {
 	margin: 1em;
 }
 
-.container {
-	position: relative;
-}
-
-.abs {
-	position: absolute;	
-}
-
-.right {
+.l-forkme {
 	right: 0;
-}
-
-.top {
 	top: 0;
-}
-
-/* Fixes issue with Documentation generation and the <code> blocks having extra margin space */
-.container.docs code {
-	display: block;
-	margin-top: -1.5em;
 }

@@ -72,3 +72,8 @@ dd{margin-left:2em;margin-bottom:1em;}
         margin:10px auto;
     }
 }
+/* Fixes issue with Documentation generation and the <code> blocks having extra margin space */
+.container.docs code {
+	display: block;
+	margin-top: -1.5em;
+}

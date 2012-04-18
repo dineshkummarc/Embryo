@@ -1,6 +1,9 @@
 // This is our "base"
 @import "normalise";
 
+// Miscellaneous helper classes
+@import "helpers";
+
 // For majority of projects "Bootstrap" is not needed
 @import "bootstrap";
 

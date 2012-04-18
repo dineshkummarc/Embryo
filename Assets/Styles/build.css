@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* normalize.css 2012-01-17T16:33 UTC - http://github.com/necolas/normalize.css */
 /* =============================================================================
    HTML5 display definitions
@@ -450,6 +451,76 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
   table-layout: fixed;
+}
+
+/* =============================================================================
+   Helpers
+   These helpers are lot like modules in that they are re-usable layout utilities
+   But modules are different in that they are re-usable design 'patterns'
+   ========================================================================== */
+.h-clearfix {
+  zoom: 1;
+}
+
+.h-clearfix:before,
+.h-clearfix:after {
+  content: "";
+  display: table;
+}
+
+.h-clearfix:after {
+  clear: both;
+}
+
+.h-hoz {
+  list-style: none;
+  padding-left: 0;
+}
+
+.h-hoz,
+.h-hoz dd {
+  margin-left: 0;
+}
+
+.h-hoz li,
+.h-hoz dt,
+.h-hoz dd {
+  display: inline;
+}
+
+.h-hoz a {
+  display: inline-block;
+}
+
+.h-hidden {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.h-container {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 10px;
+  max-width: 940px;
+  width: 90%;
+}
+
+.h-posab {
+  position: absolute;
+}
+
+.h-posrel {
+  position: relative;
+}
+
+.h-alignleft {
+  float: left;
+}
+
+.h-alignright {
+  float: right;
 }
 
 /* =============================================================================
@@ -1005,96 +1076,20 @@ textarea[readonly] {
    Layout
    Divide the page into sections. Layouts hold one or more modules together.
    ========================================================================== */
-.cf {
-  zoom: 1;
-}
-
-.cf:before,
-.cf:after {
-  content: "";
-  display: table;
-}
-
-.cf:after {
-  clear: both;
-}
-
-.media {
-  display: block;
-}
-
-.media .img {
-  float: left;
-  margin-right: 10px;
-}
-
-.media .body {
-  overflow: hidden;
-  margin-bottom: 0;
-}
-
-.hoz {
-  list-style: none;
-  padding-left: 0;
-}
-
-.hoz,
-.hoz dd {
-  margin-left: 0;
-}
-
-.hoz li,
-.hoz dt,
-.hoz dd {
-  display: inline;
-}
-
-.hoz a {
-  display: inline-block;
-}
-
-.hidden {
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-}
-
-.contain {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0 10px;
-  max-width: 940px;
-  width: 90%;
-}
-
-/* =============================================================================
-   TEMP Layout styles which are only relevant to the test HTML/PHP page
-   ========================================================================== */
+/*
+	e.g.
+	.l-grid
+	.l-fixed
+	.l-inline
+	.l-flipped
+ */
 body {
   margin: 1em;
 }
 
-.container {
-  position: relative;
-}
-
-.abs {
-  position: absolute;
-}
-
-.right {
+.l-forkme {
   right: 0;
-}
-
-.top {
   top: 0;
-}
-
-/* Fixes issue with Documentation generation and the <code> blocks having extra margin space */
-.container.docs code {
-  display: block;
-  margin-top: -1.5em;
 }
 
 /* =============================================================================
@@ -1103,10 +1098,25 @@ body {
    ========================================================================== */
 /*
 	e.g.
-	.m-btntheme
+	.m-media
 	.m-nav
 	.m-banner
+	.m-news
  */
+.m-media {
+  display: block;
+}
+
+.m-media-img {
+  float: left;
+  margin-right: 10px;
+}
+
+.m-media-body {
+  overflow: hidden;
+  margin-bottom: 0;
+}
+
 /* =============================================================================
    State
    The ways to describe how our modules or layouts will look when in a particular state. 
