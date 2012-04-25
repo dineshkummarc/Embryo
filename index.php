@@ -95,7 +95,7 @@
 			<p>I use a custom build script along with the RequireJs' `r.js` optimiser which minifies and concatenates all my scripts into a single file ready for production use.</p>
 		</div>
 		<?php flush(); ?>
-		<script data-main="Assets/Scripts/main" src="Assets/Scripts/require.js"></script>
+		<script data-main="Assets/Scripts/App/main" src="Assets/Scripts/require.js"></script>
 		<?php include 'Assets/Includes/GoogleAnalytics.php'; ?>
 	</body>
 </html>
