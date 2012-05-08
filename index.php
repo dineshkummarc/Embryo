@@ -21,7 +21,21 @@
 	<?php flush(); ?>
 	<body>
 		<?php require 'Assets/Includes/IE.php'; ?>
-		<ol class="h-hoz">
+		<ul class="grid two-col">
+		 	<li>Lorem</li>
+		 	<li>Ipsum</li>
+		 	<li>Dolor</li>
+		 	<li>Sit</li>
+		 </ul>
+		 <ul class="grid three-col">
+		 	<li>Lorem</li>
+		 	<li>Ipsum</li>
+		 	<li>Dolor</li>
+		 	<li>Sit</li>
+		 	<li>Amet</li>
+		 	<li>Consectetur</li>
+		 </ul>
+			<ol class="h-hoz">
 			<li><a href="/">Test</a></li>
 			<li><a href="/about/">Test 2</a></li>
 			<li><a href="/about/us/">Test 3</a></li>
@@ -39,8 +53,8 @@
 				<p>Might need a min-height set depending on your requirements</p>
 			</div>
 		</div>
-    	<div class="container h-posrel">
-			<a href="https://github.com/Integralist/Project-Template-Files#readme" class="h-posab l-forkme"><img src="Assets/Images/forkme.png"></a>
+    	<div class="l-container">
+			<a href="https://github.com/Integralist/Project-Template-Files#readme" class="m-forkme"><img src="Assets/Images/forkme.png"></a>
 			<h1>Project Template</h1>
 			<h2>Description</h2>		
 			<p>These are a standard set of files, scripts, stylesheets, folder structures that I use whenever I start a new web project. Below I discuss the different aspects of it.</p>

@@ -11,5 +11,12 @@
 	.m-news
  */
 
-@import "Modules/button"
+@import "Modules/button";
 @import "Modules/media";
+@import "Modules/grid";
+
+.m-forkme {
+	position: absolute;
+	right: 0;
+	top: 0;
+}

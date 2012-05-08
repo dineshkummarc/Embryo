@@ -4,7 +4,8 @@
    But modules are different in that they are re-usable design 'patterns'
    ========================================================================== */
    
-// ClearFix - http://www.nicolasgallagher.com/micro-clearfix-hack/
+// ClearFix - http://www.nicolasgallagher.com/micro-clearfix-hack/ + http://jsfiddle.net/necolas/K538S/
+// Apply this class to the element that wraps the floated elements
 .h-clearfix {
 	zoom:1; // IE6/7
 }

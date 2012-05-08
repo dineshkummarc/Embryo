@@ -14,7 +14,7 @@ require(["../ErrorHandler/errors"], function (handler) {
 	require.onError = handler;
 });
 
-require(["../Utils/Animation/easings", "../Utils/Animation/morpheus", "../Utils/XHR/ajax", "videos", "twitter"], function (easings, morpheus, ajax) {
+require(["../Utils/Animation/easings", "../Utils/Animation/morpheus", "../Utils/XHR/ajax", "videos"/*, "twitter"*/], function (easings, morpheus, ajax) {
 
 	// Animation example (using Morpheus)
 	

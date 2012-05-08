@@ -507,22 +507,6 @@ table {
   width: 90%;
 }
 
-.h-posab {
-  position: absolute;
-}
-
-.h-posrel {
-  position: relative;
-}
-
-.h-alignleft {
-  float: left;
-}
-
-.h-alignright {
-  float: right;
-}
-
 /* =============================================================================
    Code & Pre
    ========================================================================== */
@@ -1083,13 +1067,8 @@ textarea[readonly] {
 	.l-inline
 	.l-flipped
  */
-body {
-  margin: 1em;
-}
-
-.l-forkme {
-  right: 0;
-  top: 0;
+.l-container {
+  position: relative;
 }
 
 /* =============================================================================
@@ -1103,6 +1082,27 @@ body {
 	.m-banner
 	.m-news
  */
+.btn {
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  border-radius: 20px;
+  border: 1px solid #666;
+}
+
+/*
+<div class="m-media" style="border:1px solid blue;">
+	<a href="http://twitter.com/stubbornella" class="m-media-img">
+		<img src="Assets/Images/forkme.png" alt="me" />
+	</a>
+	<div class="m-media-body">
+		<p>This is a media object</p>
+		<p>Concept from Stubbornella</p>
+		<p>Might need a min-height set depending on your requirements</p>
+	</div>
+</div>
+*/
 .m-media {
   display: block;
 }
@@ -1115,6 +1115,60 @@ body {
 .m-media-body {
   overflow: hidden;
   margin-bottom: 0;
+}
+
+.grid,
+.grid > li,
+.grid > div {
+  border: 1px solid #666;
+}
+
+.grid {
+  border-width: 1px 0 0 1px;
+  /* top & left */
+  list-style: none;
+  margin-left: 0;
+  overflow: hidden;
+  /* clear floats */
+  padding-left: 0;
+}
+
+.grid > li,
+.grid > div {
+  float: left;
+  border-width: 0 1px 1px 0;
+  /* right & bottom */
+  padding: 1em;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* Columns */
+.two-col > li,
+.two-col > div {
+  width: 50%;
+}
+
+.three-col > li,
+.three-col > div {
+  width: 33.333%;
+}
+
+.four-col > li,
+.four-col > div {
+  width: 25%;
+}
+
+.five-col > li,
+.five-col > div {
+  width: 20%;
+}
+
+.m-forkme {
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 
 /* =============================================================================
@@ -1144,3 +1198,6 @@ body {
 	.t-summer
 	.t-winter
  */
+body {
+  margin: 1em;
+}

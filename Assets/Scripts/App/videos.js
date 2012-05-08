@@ -20,15 +20,30 @@ define(["../Utils/Patterns/when", "../Utils/Flash/swfobject", "async!http://gdat
 		atts, 
 		id = videos.feed.entry[0].id.$t.split("videos/")[1],
 		flash = doc.createElement("div"),
-		container = doc.getElementsByTagName("div")[2];
-
+		container = getElementByClass("container l-container", "div");
+		
+	
+	// Quick and dirty function for finding element with specific class
+	function getElementByClass (classname, element) {
+		var elements = doc.getElementsByTagName(element),
+			i = elements.length;
+		
+		while (i--) {
+			if (elements[i].className === classname) {
+				return elements[i];
+			}
+		}
+	}
+	
+	doc.getElementsByTagName("div")[7];
+	
 	function async(template) {
 		var dfd = when.defer(),
 			tmp = template({ 
-				title: "Flash content inserted via JavaScript using a template to render content"
+				title: "Flash content inserted via JavaScript (using a template to render content)"
 			}),
 			timer;
-		
+	
 		// Because template() function is asynchronous (and no callback built-in)
 		// we use a timer to keep track of 'tmp' value
 		timer = global.setInterval(function(){ 
@@ -36,23 +51,23 @@ define(["../Utils/Patterns/when", "../Utils/Flash/swfobject", "async!http://gdat
 				? (global.clearInterval(timer), dfd.resolve(tmp)) 
 				: null; 
 		}, 25);		
-		
+	
 		return dfd.promise;
 	}
-		
+	
 	function handler() {
-        require(["tpl!../Templates/Video.tpl"], function(template) {
+		require(["tpl!../../Templates/Video.tpl"], function(template) {
 			// wait for async to finish templating
-            when(async(template), function(htmlFragment) {
+			when(async(template), function(htmlFragment) {
 				var frag = doc.createDocumentFragment(),
 					div = doc.createElement("div");
-				
+	
 				// Insert 'confirmation' header into page above the Flash file
 				div.innerHTML = htmlFragment;
 				frag.appendChild(div);
 				container.insertBefore(frag, doc.getElementById("currentvideo"));
-            });
-        });
+			});
+		});
 	}
 	
 	flash.id = "insertflash";
@@ -75,13 +90,13 @@ define(["../Utils/Patterns/when", "../Utils/Flash/swfobject", "async!http://gdat
 	var ytPlayer = doc.createElement("div");
 		ytPlayer.id = "player";
 		container.appendChild(ytPlayer);
-		
+	
 	// 2.) This code loads the IFrame Player API code asynchronously.
 	var tag = document.createElement("script");
 		tag.src = "http://www.youtube.com/player_api";
 	var firstScriptTag = document.getElementsByTagName("script")[0];
 		firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-		
+	
 	// 3.) This function creates an <iframe> (and YouTube player) after the API code downloads.
 	var player;
 	window.onYouTubePlayerAPIReady = function(){ // This must be a global property. 
