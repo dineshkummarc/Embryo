@@ -1117,13 +1117,13 @@ textarea[readonly] {
   margin-bottom: 0;
 }
 
-.grid,
-.grid > li,
-.grid > div {
+.matrix,
+.matrix > li,
+.matrix > div {
   border: 1px solid #666;
 }
 
-.grid {
+.matrix {
   border-width: 1px 0 0 1px;
   /* top & left */
   list-style: none;
@@ -1133,8 +1133,8 @@ textarea[readonly] {
   padding-left: 0;
 }
 
-.grid > li,
-.grid > div {
+.matrix > li,
+.matrix > div {
   float: left;
   border-width: 0 1px 1px 0;
   /* right & bottom */

@@ -21,13 +21,13 @@
 	<?php flush(); ?>
 	<body>
 		<?php require 'Assets/Includes/IE.php'; ?>
-		<ul class="grid two-col">
+		<ul class="matrix two-col">
 		 	<li>Lorem</li>
 		 	<li>Ipsum</li>
 		 	<li>Dolor</li>
 		 	<li>Sit</li>
 		 </ul>
-		 <ul class="grid three-col">
+		 <ul class="matrix three-col">
 		 	<li>Lorem</li>
 		 	<li>Ipsum</li>
 		 	<li>Dolor</li>
