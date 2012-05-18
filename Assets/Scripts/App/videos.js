@@ -1,4 +1,4 @@
-define(["../Utils/Patterns/when", "../Utils/Flash/swfobject", "async!http://gdata.youtube.com/feeds/api/videos?author=OfficialBasRutten&alt=json"], function (when, swf, videos) {
+define(["../Utils/Templating/hogan", "../Utils/XHR/ajax", "../Utils/Flash/swfobject", "async!http://gdata.youtube.com/feeds/api/videos?author=OfficialBasRutten&alt=json"], function (hogan, ajax, swf, videos) {
 
 	/*	
 	http://www.youtube.com/watch?v=-a3u7b4Pn7Q&feature=g-logo&context=G24226c5FOAAAAAAAAAA
@@ -37,36 +37,24 @@ define(["../Utils/Patterns/when", "../Utils/Flash/swfobject", "async!http://gdat
 	
 	doc.getElementsByTagName("div")[7];
 	
-	function async(template) {
-		var dfd = when.defer(),
-			tmp = template({ 
-				title: "Flash content inserted via JavaScript (using a template to render content)"
-			}),
-			timer;
-	
-		// Because template() function is asynchronous (and no callback built-in)
-		// we use a timer to keep track of 'tmp' value
-		timer = global.setInterval(function(){ 
-			(!!tmp) 
-				? (global.clearInterval(timer), dfd.resolve(tmp)) 
-				: null; 
-		}, 25);		
-	
-		return dfd.promise;
-	}
-	
-	function handler() {
-		require(["tpl!../../Templates/Video.tpl"], function(template) {
-			// wait for async to finish templating
-			when(async(template), function(htmlFragment) {
+	function handler(){
+		ajax({
+			url: "Assets/Templates/Video.tpl?cachebuster=" + (+new Date()),
+			data: "html",
+			onSuccess: function (data) {
+				var template = hogan.compile(data),
+					content = template.render({ 
+						title: "Flash content inserted via JavaScript (using a template - Hogan.js - to render content)" 
+					});
+					
 				var frag = doc.createDocumentFragment(),
 					div = doc.createElement("div");
-	
+				
 				// Insert 'confirmation' header into page above the Flash file
-				div.innerHTML = htmlFragment;
+				div.innerHTML = content;
 				frag.appendChild(div);
 				container.insertBefore(frag, doc.getElementById("currentvideo"));
-			});
+			}
 		});
 	}
 	

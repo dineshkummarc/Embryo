@@ -1,3 +1,3 @@
 <div class="alert-message success">
-	<p><%= title %></p>
+	<p>{{title}}</p>
 </div>

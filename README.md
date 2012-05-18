@@ -51,6 +51,9 @@ Here is a round-up of some of the scripts and 'modules' used in this project tem
 * [RequireJs](http://www.requirejs.org/) - 
 "RequireJS loads plain JavaScript files as well as more defined modules"
 
+* [Hogan.js](http://twitter.github.com/hogan.js/) - 
+"JavaScript templating from twitter (Mustache compatible)"
+
 * [When](https://github.com/briancavalier/when.js#readme) - 
 "A lightweight CommonJS Promises/A and when() implementation. It also provides several other useful Promise-related concepts, such as joining and chaining, and has a robust unit test suite."
 
@@ -69,11 +72,17 @@ Here is a round-up of some of the scripts and 'modules' used in this project tem
 "Google Analytics is the enterprise-class web analytics solution that gives you rich insights into your website traffic and marketing effectiveness"
 
 * The following are a list of AMD based modules that I use a lot:
-	* Array utility methods (taken from [millermedeiros](https://github.com/millermedeiros/amd-utils))
-	* CSS utility methods
-	* DOM utility methods
-	* Host utility methods
-	* String utility methods
+	* Array utilities (taken from [millermedeiros](https://github.com/millermedeiros/amd-utils))
+	* Checks (such as `isDefined` and `isIE`)
+	* CSS utilities
+	* DOM utilities
+	* Element utilities
+	* Events library (modified from Thomas 'PointedEars' Lahn)
+	* Host utilities
+	* Pattern utilities (such as Dictionary, Observer, Promises)
+	* Polyfills
+	* String utilities
+	* XHR abstraction
 
 
 RequireJs Plugins
@@ -83,8 +92,6 @@ There are a couple of RequireJs plugins we use:
 
 * [async](https://github.com/millermedeiros/requirejs-plugins) - 
 "Useful for JSONP and asynchronous dependencies (e.g. Google Maps)"
-
-* [tpl](https://github.com/ZeeAgency/requirejs-tpl) - template engine adapted from the `_underscore` utility library
 
 RequireJs Build Script
 --------------------
