@@ -49,6 +49,16 @@ audio:not([controls]) {
    Base
    ========================================================================== */
 /*
+ * http://paulirish.com/2012/box-sizing-border-box-ftw/
+ * Apply a natural box layout model to all elements
+ */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/*
  * 1. Corrects text resizing oddly in IE6/7 when body font-size is set using em units
  *    http://clagnut.com/blog/348/#c790
  * 2. Keeps page centred in all browsers regardless of content height
@@ -507,6 +517,10 @@ table {
   width: 90%;
 }
 
+/* =============================================================================
+   Mixins
+   These components help extend rules with specific functionality to reduce code
+   ========================================================================== */
 /* =============================================================================
    Code & Pre
    ========================================================================== */
@@ -1169,6 +1183,11 @@ textarea[readonly] {
   position: absolute;
   right: 0;
   top: 0;
+}
+
+h2 {
+  border: 1px solid #999999;
+  border-width: 0 0 1px 0;
 }
 
 /* =============================================================================

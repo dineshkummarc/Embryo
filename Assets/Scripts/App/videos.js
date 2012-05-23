@@ -68,7 +68,6 @@ define(["../Utils/Templating/hogan", "../Utils/XHR/ajax", "../Utils/Flash/swfobj
 	swf.embedSWF("http://www.youtube.com/v/" + id + "?enablejsapi=1&playerapiid=ytplayer&version=3", "insertflash", "270", "150", "8", null, null, null, atts, handler);
 	
 	
-	
 	// YouTube iframe API 
 	// https://developers.google.com/youtube/iframe_api_reference
 	// https://google-developers.appspot.com/youtube/iframe_api_reference

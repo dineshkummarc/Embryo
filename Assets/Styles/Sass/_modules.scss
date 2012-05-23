@@ -20,3 +20,7 @@
 	right: 0;
 	top: 0;
 }
+
+h2 {
+	@include borders(1px, #999, "b");
+}

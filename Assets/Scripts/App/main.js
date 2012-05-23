@@ -13,17 +13,17 @@ require(["../ErrorHandler/errors"], function (handler) {
 	require.onError = handler;
 });
 
-require(["../Utils/Animation/easings", "../Utils/Animation/morpheus", "../Utils/XHR/ajax", "template", "videos"], function (easings, morpheus, ajax) {
+require(["../Utils/Animation/easings", "../Utils/Animation/morpheus", "../Utils/XHR/ajax", "template", "videos", "twitter"], function (easings, morpheus, ajax) {
 
 	// Animation example (using Morpheus)
 	
 	var header = document.getElementsByTagName("h1")[0];
-	
+
 	// Realistically you would style this element via CSS not inline styles via Js
 	// I'm just hacking this together as a quick example!
 	header.style.position = "absolute";
 	header.parentNode.style.paddingTop = "83px";	
-		
+
 	morpheus(header, {
 		backgroundColor: "#00f",
 		duration: 3000,
@@ -32,18 +32,16 @@ require(["../Utils/Animation/easings", "../Utils/Animation/morpheus", "../Utils/
 		left: 400,
 		easing: easings.bounce,
 		complete: function () {
-        	alert("animation finished");
-        }
+			alert("animation finished");
+		}
 	});
-	
+
 	// XHR Example
 	ajax({
 	   url: "humans.txt",
 	   onSuccess: function (response) {
-	       console.log('XHR response: ', response);
+		   console.log('XHR response: ', response);
 	   }
 	});
 
 });
-
-require(["twitter"]);

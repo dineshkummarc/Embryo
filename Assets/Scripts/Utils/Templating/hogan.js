@@ -13,12 +13,11 @@
  *  limitations under the License.
  *
  *  http://twitter.github.com/hogan.js/
+ *  https://github.com/twitter/hogan.js/tree/master/web/builds/2.0.0
  *
  *	Based on Mustache so contents of following link should all work: http://mustache.github.com/mustache.5.html
  */
 
-define(function(){
-	
 var Hogan = {};
 
 (function (Hogan, useArrayBuffer) {
@@ -243,7 +242,10 @@ var Hogan = {};
 	return Object.prototype.toString.call(a) === '[object Array]';
   };
 
-})(Hogan);
+})(typeof exports !== 'undefined' ? exports : Hogan);
+
+
+
 
 (function (Hogan) {
   // Setup regex  assignments
@@ -573,8 +575,9 @@ var Hogan = {};
 	t = this.generate(this.parse(this.scan(text, options.delimiters), text, options), text, options);
 	return this.cache[key] = t;
   };
-})(Hogan);
+})(typeof exports !== 'undefined' ? exports : Hogan);
 
-return Hogan;
 
-});
+if (typeof define === 'function' && define.amd) {
+  define(Hogan);
+}
